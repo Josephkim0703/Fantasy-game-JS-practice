@@ -1,5 +1,6 @@
+
 body{
-    overflow: hidden;
+    overflow : hidden;
     margin: 0;
 }
 
@@ -7,80 +8,132 @@ body{
     --primary-color: white;
     --secondary-color:  black;
 }
+
+
 .box{
    
     position: relative; top: 30vh; left: 1vw;
-    border: solid 2px var(--secondary-color);
-    background: var(--primary-color);
-    border-radius: 2rem;
     position: relative; width: 300px; height: 400px;
    
 }
+h1{
+    font-family: "Bilbo Swash Caps";
+}
+p{
+    font-family: "Bilbo Swash Caps";
+}
 
 .info{
-    font-size: 30px;
-    position: absolute; top: 5px; left: 40px;
-    font-family: 'Times New Roman', Times, serif;
+ 
+    font-size: 35px;
+    position: absolute; top: -25px; left: 75px;
+
 }
 
 ul{
-    font-family: 'Times New Roman', Times, serif;
+  
     font-size: 20px;
     color: var(--secondary-color);
-    position: absolute; top: 70px;
+    position: absolute; top: 30px; left: 35px;
+
+}
+li{
+    font-family: "Bilbo Swash Caps";
+    margin: 0px 0 14px 0;
+ font-size: 25px;
 
 }
 img{
 
     z-index: -1;
-  position: fixed;
+  position: fixed; top: 0;
     border: 0px;
     padding: 0px;
     width: 100% ;
     height:100%;
 }
 
-.ageConverter{
-    border: solid 2px var(--secondary-color);
-    background: var(--primary-color);
-    border-radius: 2rem;
-    position: absolute; width: 300px; height: 200px; top: 2vh; left: 1vw;
-}
 
 #ya{
-font-size: 25px;
-position: absolute; left: 40px;
+font-size: 30px;
+position: absolute; left: 90px; top: 60px;
 
 }
 h3{
-font-size: 20px;
-position: relative; top: 36px; left: 20px;
+ font-family:    "Bilbo Swash Caps";
+font-size: 25px;
+position: relative; top: 95px; left: 67px;
 }
 #ageRace{
-font-size: 20px;
-position: absolute; top: 35px; left: 75px;
+font-size: 25px;
+position: absolute; top: 96px; left: 130px;
 }
 
 #raceAge{
-    font-size: 20px;
-position: absolute; top: 80px; left: 65px;
+    font-size: 30px;
+position: absolute; top: 145px; left: 115px;
 }
 
 #conversion{
-    font-size: 18px;
-    position: absolute; top: 126px; left: 130px;
-}
-/*
-label{
-    position: absolute; top: 7px; left: 10px;
+    
+    font-size: 25px;
+    position: absolute; top: 209px; left: 160px;
 }
 
-input{
-    position: absolute; top: 25px; left: 10px;
-    width: 90px; 
+
+
+.classBox{
+position: absolute; top: 70px; left: 1620px;
 }
-button{
-    position: absolute; top: 175px; left: 40px;
-    border-radius: 2rem;
+
+.c{
+position: absolute; left: 10px; top: 2px;
 }
-*/
+
+#cc{
+position: absolute; left: 90px; top: -6px;
+font-size: 30px;
+}
+
+#classImg{
+
+    z-index: 100;
+    width: 150px;
+    height: 150px;
+    position: absolute; top: 65px; left:35px;
+}
+
+.stats{
+position: absolute; top: 470px; left: 1678px;
+font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+.scroll{
+    position: absolute; top: 15px;  left:10px;
+width: 350px; height: 300px;
+
+
+}
+.scroll2{
+    position: absolute; top: 350px;  left:10px;
+    width: 350px; height: 500px;
+}
+
+.scroll3{
+    position: absolute; top: 15px;  left:1550px;
+    width: 350px; height: 350px;
+}
+
+.scroll4{
+    position: absolute; top: 400px;  left:1550px;
+    width: 350px; height: 450px;
+}
+
