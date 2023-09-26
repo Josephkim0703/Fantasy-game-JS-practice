@@ -1,32 +1,52 @@
 
+
+function game(){
+
 window.alert("Hello fellow traveler! Welcome to Alexandria");
 window.alert("Your Journey begins here. I will ask a serious of questions to get to know you");
 
 let name = prompt("What is your name fellow traveler?");
+firstLetter = name.slice(0, 1);
+firstLetter = firstLetter.toUpperCase();
+name = firstLetter + name.slice(1);
 window.alert("What a fine name " + name + "!");
 document.getElementById("name").innerHTML = name;
  
-let gender = prompt("What might your gender be, traveler " + "Please type male or female");
+
+do{
+let gender = prompt("What might your gender be, traveler " + "\n Please type male or female");
+gender = gender.toLowerCase();
+if (gender === "male" || gender === "female") {
 window.alert("I see you are a " + gender);
 document.getElementById("gender").innerHTML = gender;
+break;
+}
+else{
+    window.alert("SPELLING ERROR!");
+}
+}while( gender !=  "female" || "male" );
 
-
-
-
-let age = prompt("What is your age?");
-age = Number(age);
-{
-
+let age;
+do{
+ age = prompt("What is your age?");
+if(age > 0 && age <= 100){
 
 if( age <= 18){
  window.alert("You are quite young fellow traveler! You must be quite strong to start at such a young age");
 
+break;
+
 } else{
   window.alert("Splendid! Age is just a number anyone can become an adventurer!");
- 
+  
+ break;
 }
+} else{
+    window.alert("ERROR! Age must be a number!");
+}
+}while(age != age < 0 || age >= 100);
 
-}
+
 window.alert("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
 
 let RACE = Math.floor(Math.random() * 5) + 1;
@@ -148,5 +168,7 @@ case 8:
     document.getElementById("classImg").src = "./assets/archetype.png";
 break;
 
+
+}
 
 }

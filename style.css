@@ -108,10 +108,28 @@ position: absolute; top: 470px; left: 1678px;
 font-size: 20px;
 }
 
-
-
-
-
+#startButton {
+    font-family: "Bilbo Swash Caps"; 
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: #946137;
+    border: 1px solid black;
+    border-radius: 2rem;
+    box-shadow: 0 9px #999;
+    position: relative; top: 27vh; left: 1vw;
+  }
+  
+  #startButton:hover {background-color: #6d4a2e}
+  
+  #startButton:active {
+    background-color: #6d4a2e;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
 
 
 
