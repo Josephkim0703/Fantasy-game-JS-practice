@@ -40,8 +40,13 @@ ul{
 li{
     font-family: "Bilbo Swash Caps";
     margin: 0px 0 14px 0;
- font-size: 25px;
+   
 
+}
+
+.info1{
+    font-size: 25px;
+    
 }
 img{
 
@@ -104,7 +109,7 @@ font-size: 30px;
 }
 
 .stats{
-position: absolute; top: 470px; left: 1678px;
+position: absolute; top: 485px; left: 1678px;
 font-size: 20px;
 }
 
@@ -131,11 +136,17 @@ font-size: 20px;
     transform: translateY(4px);
   }
 
-.Statistics{
+#description{
+    font-size: 25px;
+position: absolute; top: -65px; 
+text-align: start; left: -50px;
+width: 500px;
 
-    position: absolute; top: 55px; left:-70px ;
-    font-size:10px;
-    font-family: "Bilbo Swash Caps";
+}
+
+.Statistics{
+    position: absolute; top: 50px; left:-75px ;
+    font-size: 22px;
 }
 
 
@@ -157,6 +168,6 @@ width: 350px; height: 300px;
 
 .scroll4{
     position: absolute; top: 400px;  left:1550px;
-    width: 350px; height: 450px;
+    width: 350px; height: 520px;
 }
 

@@ -1,4 +1,4 @@
-
+/*
 //40 different combination types
 
 if(RACE === 1){
@@ -182,6 +182,7 @@ if(RACE === 2 && cL === 1){
     dexterity = dexterity + 3;
     intelligence = intelligence + 2;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -201,6 +202,7 @@ else if(RACE === 2 && cL === 2){
     dexterity = dexterity + 2;
     intelligence = intelligence + 7;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -220,13 +222,13 @@ else if(RACE === 2 && cL === 3){
     dexterity = dexterity + 2;
     intelligence = intelligence + 7;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
     document.getElementById("stamina").innerHTML = "Stamina: "+ stamina;
     document.getElementById("mana").innerHTML = "Mana: " + mana;
-    document.getElementById("dexterity").innerHTML = "Dexterity: "+ dexterity;
-    
+    document.getElementById("dexterity").innerHTML = "Dexterity: "+ dexterity;    
     document.getElementById("intelligence").innerHTML = "Intelligence: "+ intelligence;
 }
 
@@ -240,6 +242,7 @@ else if(RACE === 2 && cL === 4){
     dexterity = dexterity + 3;
     intelligence = intelligence + 3;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -259,6 +262,7 @@ else if(RACE === 2 && cL === 5){
     dexterity = dexterity + 8;
     intelligence = intelligence + 8;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -278,6 +282,7 @@ else if(RACE === 2 && cL === 6){
     dexterity = dexterity + 3;
     intelligence = intelligence -3;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -297,6 +302,7 @@ else if(RACE === 2 && cL === 7){
     dexterity = dexterity + 9;
     intelligence = intelligence + 7;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -316,6 +322,7 @@ else if(RACE === 2 && cL === 8){
     dexterity = dexterity + 12;
     intelligence = intelligence + 12;
 
+    document.getElementById("description").innerHTML = "Dwarfs give +2 dexterity and intelligence";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -336,6 +343,7 @@ else if(RACE === 3 && cL === 1){
     dexterity = dexterity + 1;
     intelligence = intelligence;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -355,6 +363,7 @@ else if(RACE === 3 && cL === 2){
     dexterity = dexterity;
     intelligence = intelligence + 5;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -374,6 +383,7 @@ else if(RACE === 3 && cL === 3){
     dexterity = dexterity;
     intelligence = intelligence + 5;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -394,6 +404,7 @@ else if(RACE === 3 && cL === 4){
     dexterity = dexterity + 1;
     intelligence = intelligence + 1;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -413,6 +424,7 @@ else if(RACE === 3 && cL === 5){
     dexterity = dexterity + 6;
     intelligence = intelligence + 6;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -432,6 +444,7 @@ else if(RACE === 3 && cL === 6){
     dexterity = dexterity + 1;
     intelligence = intelligence -5;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -451,6 +464,7 @@ else if(RACE === 3 && cL === 7){
     dexterity = dexterity + 7;
     intelligence = intelligence + 5;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -470,6 +484,7 @@ else if(RACE === 3 && cL === 8){
     dexterity = dexterity + 10;
     intelligence = intelligence + 10;
 
+    document.getElementById("description").innerHTML = "Elfs give +2 aim and stamina";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -490,6 +505,7 @@ else if(RACE === 4 && cL === 1){
     dexterity = dexterity + 1;
     intelligence = intelligence;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -509,6 +525,7 @@ else if(RACE === 4 && cL === 2){
     dexterity = dexterity;
     intelligence = intelligence + 5;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -528,13 +545,13 @@ else if(RACE === 4 && cL === 3){
     dexterity = dexterity;
     intelligence = intelligence + 5;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
     document.getElementById("stamina").innerHTML = "Stamina: "+ stamina;
     document.getElementById("mana").innerHTML = "Mana: " + mana;
-    document.getElementById("dexterity").innerHTML = "Dexterity: "+ dexterity;
-    
+    document.getElementById("dexterity").innerHTML = "Dexterity: "+ dexterity; 
     document.getElementById("intelligence").innerHTML = "Intelligence: "+ intelligence;
 }
 
@@ -548,6 +565,7 @@ else if(RACE === 4 && cL === 4){
     dexterity = dexterity + 1;
     intelligence = intelligence + 1;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -567,6 +585,7 @@ else if(RACE === 4 && cL === 5){
     dexterity = dexterity + 6;
     intelligence = intelligence + 6;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -586,6 +605,7 @@ else if(RACE === 4 && cL === 6){
     dexterity = dexterity + 1;
     intelligence = intelligence -5;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -605,6 +625,7 @@ else if(RACE === 4 && cL === 7){
     dexterity = dexterity + 7;
     intelligence = intelligence + 5;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -624,6 +645,7 @@ else if(RACE === 4 && cL === 8){
     dexterity = dexterity + 10;
     intelligence = intelligence + 10;
 
+    document.getElementById("description").innerHTML = "Beastmen give +2 stamina and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -633,7 +655,7 @@ else if(RACE === 4 && cL === 8){
     document.getElementById("intelligence").innerHTML = "Intelligence: "+ intelligence;
 }
 
-//Halfling gives +1 everything +2 mana and strength
+//Halfling gives +1 everything and +2 mana and strength
 //Halfling + warrior
 else if(RACE === 5 && cL === 1){
     health = health + 1;
@@ -644,6 +666,7 @@ else if(RACE === 5 && cL === 1){
     dexterity = dexterity + 2;
     intelligence = intelligence + 1;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -663,6 +686,7 @@ else if(RACE === 5 && cL === 2){
     dexterity = dexterity + 1;
     intelligence = intelligence + 6;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -682,13 +706,13 @@ else if(RACE === 5 && cL === 3){
     dexterity = dexterity + 1;
     intelligence = intelligence + 6;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
     document.getElementById("stamina").innerHTML = "Stamina: "+ stamina;
     document.getElementById("mana").innerHTML = "Mana: " + mana;
-    document.getElementById("dexterity").innerHTML = "Dexterity: "+ dexterity;
-    
+    document.getElementById("dexterity").innerHTML = "Dexterity: "+ dexterity; 
     document.getElementById("intelligence").innerHTML = "Intelligence: "+ intelligence;
 }
 
@@ -702,6 +726,7 @@ else if(RACE === 5 && cL === 4){
     dexterity = dexterity + 2;
     intelligence = intelligence + 2;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -721,6 +746,7 @@ else if(RACE === 5 && cL === 5){
     dexterity = dexterity + 7;
     intelligence = intelligence + 7;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -740,6 +766,7 @@ else if(RACE === 5 && cL === 6){
     dexterity = dexterity + 2;
     intelligence = intelligence -4;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -759,6 +786,7 @@ else if(RACE === 5 && cL === 7){
     dexterity = dexterity + 8;
     intelligence = intelligence + 6;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -778,6 +806,7 @@ else if(RACE === 5 && cL === 8){
     dexterity = dexterity + 11;
     intelligence = intelligence + 11;
 
+    document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
     document.getElementById("health").innerHTML = "Health: "+ health;
     document.getElementById("strength").innerHTML = "Strength: "+ strength;
     document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -787,3 +816,4 @@ else if(RACE === 5 && cL === 8){
     document.getElementById("intelligence").innerHTML = "Intelligence: "+ intelligence;
 }
 }
+*/
