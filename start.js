@@ -1,6 +1,6 @@
 
 
-function game(){
+function character(){
 
 window.alert("Hello fellow traveler! Welcome to Alexandria");
 window.alert("Your Journey begins here. I will ask a serious of questions to get to know you");
