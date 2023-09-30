@@ -1,21 +1,31 @@
-
-
-function character(){
+window.onload = function() {
 
 window.alert("Hello fellow traveler! Welcome to Alexandria");
 window.alert("Your Journey begins here. I will ask a serious of questions to get to know you");
 
 //Name uppercases the first letter
-let name = prompt("What is your name fellow traveler?");
-firstLetter = name.slice(0, 1);
+let name;
+
+do{
+name = prompt("What is your name fellow traveler?");
+name = name.toLowerCase()
+let firstLetter = name.slice(0, 1);
 firstLetter = firstLetter.toUpperCase();
 name = firstLetter + name.slice(1);
+
+if(name){
 window.alert("What a fine name " + name + "!");
 document.getElementById("name").innerHTML = name;
+}else{
+window.alert("ERROR! Please input a Valid name!");
+}
+}while(name == "");
 
 //Gender loop for when someone types something other then male or female
+let gender;
+
 do{
-let gender = prompt("What might your gender be, traveler " + "\n Please type male or female");
+gender = prompt("What might your gender be, traveler " + "\n Please type male or female");
 gender = gender.toLowerCase();
 if (gender === "male" || gender === "female") {
 window.alert("I see you are a " + gender);
@@ -29,29 +39,31 @@ else{
 
 //Age loop if someone doesnt type a number
 let age;
+
 do{
+
  age = prompt("What is your age?");
+ age = Number(age);
 if(age > 0 && age <= 100){
 
 if( age <= 18){
  window.alert("You are quite young fellow traveler! You must be quite strong to start at such a young age");
-
 break;
-
 } else{
-  window.alert("Splendid! Age is just a number anyone can become an adventurer!");
-  
+  window.alert("Splendid! Age is just a number anyone can become an adventurer!");  
  break;
 }
-} else{
-    window.alert("ERROR! Age must be a number!");
+
 }
-}while(age != age < 0 || age >= 100);
+else{
+    window.alert("ERROR! Must be a Valid Age!");
+}
+}while(age != age > 0 || age <= 100);
 
 //Race generator
 window.alert("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
 
-let RACE = Math.floor(Math.random() * 5) + 1;
+const RACE = Math.floor(Math.random() * 5) + 1;
 let ageType;
 
 switch (RACE){
@@ -109,7 +121,7 @@ break;
 
 //Class generator
 window.alert("You will now be given a random class \n Options: \n -Warrior \n -Archer \n -Mage \n -Healer \n -Assassin \n -Barbarian \n -Craftsmen \n RARE: Archetype");
-let cL = Math.floor(Math.random() * 8) + 1;
+const cL = Math.floor(Math.random() * 8) + 1;
 
 switch (cL){
    
@@ -172,14 +184,30 @@ break;
 
 //Stat generator takes race and class type and generates stats based on that combination
 //40 different combination types
+
+let humanHealth;
+let humanStrength;
+let humanAim;
+let humanStamina;
+let humanMana;
+let humanDexterity;
+let humanIntelligence;
+let health; 
+let strength;
+let aim ;
+let stamina ;
+let mana;
+let dexterity;
+let intelligence;
+
 if(RACE === 1){
-    let humanHealth = 10;
-    let humanStrength = 5;
-    let humanAim = 5;
-    let humanStamina = 10;
-    let humanMana = 5;
-    let humanDexterity = 5;
-    let humanIntelligence = 10;
+    humanHealth = 10;
+    humanStrength = 5;
+    humanAim = 5;
+    humanStamina = 10;
+    humanMana = 5;
+    humanDexterity = 5;
+    humanIntelligence = 10;
     
     //human + warrior
     if(RACE === 1 && cL === 1){
@@ -334,19 +362,19 @@ if(RACE === 1){
         return Math.floor(Math.random() * (max - min) + min);
     }
     
-    let health = randomNumber(15, 20); 
-    let strength = randomNumber(10, 15); 
-    let aim = randomNumber(10, 15); 
-    let stamina = randomNumber(15, 20); 
-    let mana = randomNumber(10, 15);
-    let dexterity = randomNumber(10, 15);
-    let intelligence = randomNumber(15, 20);
+    health = randomNumber(15, 20); 
+    strength = randomNumber(10, 15); 
+    aim = randomNumber(10, 15); 
+    stamina = randomNumber(15, 20); 
+    mana = randomNumber(10, 15);
+    dexterity = randomNumber(10, 15);
+    intelligence = randomNumber(15, 20);
     
     //dwarfs give +2 dexterity and  intelligence
     //dwarf + warrior
     if(RACE === 2 && cL === 1){
         health = health;
-        strenght = strength + 3;
+        strength = strength + 3;
         aim = 0;
         stamina = stamina + 3;
         mana = 0;
@@ -366,7 +394,7 @@ if(RACE === 1){
     //dwarf + archer
     else if(RACE === 2 && cL === 2){
         health = health;
-        strenght = strength + 1;
+        strength = strength + 1;
         aim = aim + 6;
         stamina = stamina + 1;
         mana = 0;
@@ -386,7 +414,7 @@ if(RACE === 1){
     //dwarf + mage
     else if(RACE === 2 && cL === 3){
         health = health;
-        strenght = strength;
+        strength = strength;
         aim = aim + 3;
         stamina = stamina - 2;
         mana = mana + 6;
@@ -406,7 +434,7 @@ if(RACE === 1){
     //dwarf + healer
     else if(RACE === 2 && cL === 4){
         health = health;
-        strenght = strength - 3;
+        strength = strength - 3;
         aim = aim + 1;
         stamina = stamina - 3;
         mana = mana + 3;
@@ -426,7 +454,7 @@ if(RACE === 1){
     //dwarf + assassin
     else if(RACE === 2 && cL === 5){
         health = health;
-        strenght = strength;
+        strength = strength;
         aim = aim + 2;
         stamina = stamina + 5;
         mana = 0;
@@ -446,7 +474,7 @@ if(RACE === 1){
     //dwarf + barbarian
     else if(RACE === 2 && cL === 6){
         health = health;
-        strenght = strength + 5;
+        strength = strength + 5;
         aim = 0;
         stamina = stamina + 6;
         mana = 0;
@@ -466,7 +494,7 @@ if(RACE === 1){
     //dwarf + craftsmen
     else if(RACE === 2 && cL === 7){
         health = health;
-        strenght = strength - 2;
+        strength = strength - 2;
         aim = 0;
         stamina = stamina + 2;
         mana = mana + 2;
@@ -486,7 +514,7 @@ if(RACE === 1){
     //dwarf + archetype
     else if(RACE === 2 && cL === 8){
         health = health + 5;
-        strenght = strength + 5;
+        strength = strength + 5;
         aim = aim + 5;
         stamina = stamina + 10;
         mana = mana + 10;
@@ -507,7 +535,7 @@ if(RACE === 1){
     //elf + warrior
     else if(RACE === 3 && cL === 1){
         health = health;
-        strenght = strength + 3;
+        strength = strength + 3;
         aim =  2;
         stamina = stamina + 5;
         mana = 0;
@@ -527,7 +555,7 @@ if(RACE === 1){
     //elf + archer
     else if(RACE === 3 && cL === 2){
         health = health;
-        strenght = strength + 1;
+        strength = strength + 1;
         aim = aim + 8;
         stamina = stamina + 3;
         mana = 0;
@@ -547,7 +575,7 @@ if(RACE === 1){
     //elf + mage
     else if(RACE === 3 && cL === 3){
         health = health;
-        strenght = strength;
+        strength = strength;
         aim = aim + 5;
         stamina = stamina;
         mana = mana + 6;
@@ -568,7 +596,7 @@ if(RACE === 1){
     //elf + healer
     else if(RACE === 3 && cL === 4){
         health = health;
-        strenght = strength - 3;
+        strength = strength - 3;
         aim = aim + 3;
         stamina = stamina - 1;
         mana = mana + 3;
@@ -588,7 +616,7 @@ if(RACE === 1){
     //elf + assassin
     else if(RACE === 3 && cL === 5){
         health = health;
-        strenght = strength;
+        strength = strength;
         aim = aim + 4;
         stamina = stamina + 7;
         mana = 0;
@@ -608,7 +636,7 @@ if(RACE === 1){
     //elf + barbarian
     else if(RACE === 3 && cL === 6){
         health = health;
-        strenght = strength + 5;
+        strength = strength + 5;
         aim = 2;
         stamina = stamina + 8;
         mana = 0;
@@ -628,7 +656,7 @@ if(RACE === 1){
     //elf + craftsmen
     else if(RACE === 3 && cL === 7){
         health = health;
-        strenght = strength - 2;
+        strength = strength - 2;
         aim = 2;
         stamina = stamina + 4;
         mana = mana + 2;
@@ -648,7 +676,7 @@ if(RACE === 1){
     //elf + archetype
     else if(RACE === 3 && cL === 8){
         health = health + 5;
-        strenght = strength + 5;
+        strength = strength + 5;
         aim = aim + 7;
         stamina = stamina + 12;
         mana = mana + 10;
@@ -669,7 +697,7 @@ if(RACE === 1){
     //beastmen + warrior
     else if(RACE === 4 && cL === 1){
         health = health;
-        strenght = strength + 5;
+        strength = strength + 5;
         aim = 0;
         stamina = stamina + 5;
         mana = 0;
@@ -689,7 +717,7 @@ if(RACE === 1){
     //beastmen + archer
     else if(RACE === 4 && cL === 2){
         health = health;
-        strenght = strength + 3;
+        strength = strength + 3;
         aim = aim + 6;
         stamina = stamina + 3;
         mana = 0;
@@ -709,7 +737,7 @@ if(RACE === 1){
     //beastmen + mage
     else if(RACE === 4 && cL === 3){
         health = health;
-        strenght = strength + 2;
+        strength = strength + 2;
         aim = aim + 3;
         stamina = stamina;
         mana = mana + 6;
@@ -729,7 +757,7 @@ if(RACE === 1){
     //beastmen + healer
     else if(RACE === 4 && cL === 4){
         health = health;
-        strenght = strength - 1;
+        strength = strength - 1;
         aim = aim + 1;
         stamina = stamina - 1;
         mana = mana + 3;
@@ -749,7 +777,7 @@ if(RACE === 1){
     //beastmen + assassin
     else if(RACE === 4 && cL === 5){
         health = health;
-        strenght = strength + 2;
+        strength = strength + 2;
         aim = aim + 2;
         stamina = stamina + 7;
         mana = 0;
@@ -769,7 +797,7 @@ if(RACE === 1){
     //beastmen + barbarian
     else if(RACE === 4 && cL === 6){
         health = health;
-        strenght = strength + 7;
+        strength = strength + 7;
         aim = 0;
         stamina = stamina + 8;
         mana = 0;
@@ -789,7 +817,7 @@ if(RACE === 1){
     //beastmen + craftsmen
     else if(RACE === 4 && cL === 7){
         health = health;
-        strenght = strength;
+        strength = strength;
         aim = 0;
         stamina = stamina + 4;
         mana = mana + 2;
@@ -809,7 +837,7 @@ if(RACE === 1){
     //beastmen + archetype
     else if(RACE === 4 && cL === 8){
         health = health + 5;
-        strenght = strength + 7;
+        strength = strength + 7;
         aim = aim + 5;
         stamina = stamina + 12;
         mana = mana + 10;
@@ -830,14 +858,14 @@ if(RACE === 1){
     //Halfling + warrior
     else if(RACE === 5 && cL === 1){
         health = health + 1;
-        strenght = strength + 5;
+        strength = strength + 5;
         aim = 1;
         stamina = stamina + 5;
         mana = 1;
         dexterity = dexterity + 2;
         intelligence = intelligence + 1;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -850,14 +878,14 @@ if(RACE === 1){
     //Halfling + archer
     else if(RACE === 5 && cL === 2){
         health = health + 1;
-        strenght = strength + 3;
+        strength = strength + 3;
         aim = aim + 7;
         stamina = stamina + 2;
         mana = 1;
         dexterity = dexterity + 1;
         intelligence = intelligence + 6;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -870,14 +898,14 @@ if(RACE === 1){
     //Halfling + mage
     else if(RACE === 5 && cL === 3){
         health = health + 1;
-        strenght = strength + 2;
+        strength = strength + 2;
         aim = aim + 4;
         stamina = stamina - 1;
         mana = mana + 8;
         dexterity = dexterity + 1;
         intelligence = intelligence + 6;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -890,14 +918,14 @@ if(RACE === 1){
     //Halfling + healer
     else if(RACE === 5 && cL === 4){
         health = health + 1;
-        strenght = strength - 1;
+        strength = strength - 1;
         aim = aim + 2;
         stamina = stamina - 2;
         mana = mana + 5;
         dexterity = dexterity + 2;
         intelligence = intelligence + 2;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -910,14 +938,14 @@ if(RACE === 1){
     //Halfling + assassin
     else if(RACE === 5 && cL === 5){
         health = health + 1;
-        strenght = strength + 2;
+        strength = strength + 2;
         aim = aim + 1;
         stamina = stamina + 6;
         mana = 2;
         dexterity = dexterity + 7;
         intelligence = intelligence + 7;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -930,14 +958,14 @@ if(RACE === 1){
     //Halfling + barbarian
     else if(RACE === 5 && cL === 6){
         health = health + 1;
-        strenght = strength + 7;
+        strength = strength + 7;
         aim = 1;
         stamina = stamina + 7;
         mana = 2;
         dexterity = dexterity + 2;
         intelligence = intelligence -4;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -950,14 +978,14 @@ if(RACE === 1){
     //Halfling + craftsmen
     else if(RACE === 5 && cL === 7){
         health = health + 1;
-        strenght = strength;
+        strength = strength;
         aim = 1;
         stamina = stamina + 3;
         mana = mana + 4;
         dexterity = dexterity + 8;
         intelligence = intelligence + 6;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;
@@ -970,14 +998,14 @@ if(RACE === 1){
     //Halfling + archetype
     else if(RACE === 5 && cL === 8){
         health = health + 6;
-        strenght = strength + 7;
+        strength = strength + 7;
         aim = aim + 6;
         stamina = stamina + 11;
         mana = mana + 12;
         dexterity = dexterity + 11;
         intelligence = intelligence + 11;
     
-        document.getElementById("description").innerHTML = "Halfling gives +1 all stats and +2 mana and strength";
+        document.getElementById("description").innerHTML = "Halfling gives +1 all & +2 mana and strength";
         document.getElementById("health").innerHTML = "Health: "+ health;
         document.getElementById("strength").innerHTML = "Strength: "+ strength;
         document.getElementById("aim").innerHTML = "Aim: "+ aim;

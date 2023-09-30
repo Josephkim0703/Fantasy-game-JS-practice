@@ -1,197 +1,234 @@
-
-body{
-    overflow : hidden;
-    margin: 0;
-    flex-wrap: wrap;
+body {
+  overflow: hidden;
+  margin: 0;
 }
 
-:root{
-    --primary-color: white;
-    --secondary-color:  black;
+:root {
+  --primary-color: white;
+  --secondary-color: black;
 }
 
-
-.box{
-   
-    position: absolute; top: 50vh; left: 1vw;
-    width: 300px; height: 400px;
-   
+.box {
+  position: absolute;
+  top: 50vh;
+  left: 1vw;
+  width: 300px;
+  height: 400px;
 }
-h1{
-    font-family: "Bilbo Swash Caps";
+h1 {
+  font-family: "Bilbo Swash Caps";
 }
-p{
-    font-family: "Bilbo Swash Caps";
-}
-
-.info{
- 
-    font-size: 35px;
-    position: absolute; top: -25px; left: 75px;
-
+p {
+  font-family: "Bilbo Swash Caps";
 }
 
-ul{
-  
-    font-size: 20px;
-    color: var(--secondary-color);
-    position: absolute; top: 30px; left: 35px;
-
-}
-li{
-    font-family: "Bilbo Swash Caps";
-    margin: 0px 0 14px 0;
-   
-
+.info {
+  font-size: 35px;
+  position: absolute;
+  top: -25px;
+  left: 75px;
 }
 
-.info1{
-    font-size: 25px;
-    
+ul {
+  font-size: 20px;
+  color: var(--secondary-color);
+  position: absolute;
+  top: 30px;
+  left: 35px;
 }
-img{
-
-    z-index: -1;
-  position: fixed; top: 0;
-    border: 0px;
-    padding: 0px;
-    width: 100% ;
-    height:100%;
+li {
+  font-family: "Bilbo Swash Caps";
+  margin: 0px 0 14px 0;
 }
 
-
-#ya{
-font-size: 30px;
-position: absolute; left: 90px; top: 60px;
-
+.info1 {
+  font-size: 25px;
 }
-h3{
- font-family:    "Bilbo Swash Caps";
-font-size: 25px;
-position: relative; top: 95px; left: 67px;
-}
-#ageRace{
-font-size: 25px;
-position: absolute; top: 96px; left: 130px;
+img {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  border: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
 }
 
-#raceAge{
-    font-size: 30px;
-position: absolute; top: 145px; left: 115px;
+#ya {
+  font-size: 30px;
+  position: absolute;
+  left: 90px;
+  top: 60px;
+}
+h3 {
+  font-family: "Bilbo Swash Caps";
+  font-size: 25px;
+  position: relative;
+  top: 95px;
+  left: 67px;
+}
+#ageRace {
+  font-size: 25px;
+  position: absolute;
+  top: 96px;
+  left: 130px;
 }
 
-#conversion{
-    
-    font-size: 25px;
-    position: absolute; top: 209px; left: 160px;
+#raceAge {
+  font-size: 30px;
+  position: absolute;
+  top: 145px;
+  left: 115px;
 }
 
-
-
-.classBox{
-position: absolute; top: 70px; left: 1620px;
+#conversion {
+  font-size: 25px;
+  position: absolute;
+  top: 209px;
+  left: 160px;
 }
 
-.c{
-position: absolute; left: 10px; top: 2px;
+.classBox {
+  position: absolute;
+  top: 70px;
+  left: 1620px;
 }
 
-#cc{
-position: absolute; left: 90px; top: -6px;
-font-size: 30px;
+.c {
+  position: absolute;
+  left: 10px;
+  top: 2px;
 }
 
-#classImg{
-
-    z-index: 100;
-    width: 150px;
-    height: 150px;
-    position: absolute; top: 65px; left:35px;
+#cc {
+  position: absolute;
+  left: 90px;
+  top: -6px;
+  font-size: 30px;
 }
 
-.stats{
-position: absolute; top: 485px; left: 1678px;
-font-size: 20px;
+#classImg {
+  z-index: 100;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 65px;
+  left: 35px;
+}
+
+.stats {
+  position: absolute;
+  top: 485px;
+  left: 1678px;
+  font-size: 20px;
 }
 
 #createCharacter {
-    font-family: "Bilbo Swash Caps"; 
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
-    background-color: #946137;
-    border: 1px solid black;
-    border-radius: 2rem;
-    box-shadow: 0 8px #999;
-    position: absolute; top: 830px; left: 1vw;
-  }
-  
-  #createCharacter:hover {background-color: #6d4a2e}
-  
-  #createCharacter:active {
-    background-color: #6d4a2e;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-
-  #startButton {
-    font-family: "Bilbo Swash Caps"; 
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
-    background-color: #946137;
-    border: 1px solid black;
-    border-radius: 2rem;
-    box-shadow: 0 10px #999;
-    position: absolute; top: 830px; left: 11vw;
-  }
-  
-  #startButton:hover {background-color: #6d4a2e}
-  
-  #startButton:active {
-    background-color: #6d4a2e;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-
-#description{
-    font-size: 25px;
-position: absolute; top: -65px; 
-text-align: start; left: -50px;
-width: 500px;
-
+  font-family: "Bilbo Swash Caps";
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #946137;
+  border: 1px solid black;
+  border-radius: 2rem;
+  box-shadow: 0 8px #999;
+  position: absolute;
+  top: 400px;
+  left: 45vw;
 }
 
-.Statistics{
-    position: absolute; top: 50px; left:-75px ;
-    font-size: 22px;
+#createCharacter:hover {
+  background-color: #6d4a2e;
 }
 
-
-.scroll{
-    position: absolute; top: 15px;  left:10px;
-width: 350px; height: 300px;
-
-
-}
-.scroll2{
-    position: absolute; top: 350px;  left:10px;
-    width: 350px; height: 480px;
+#createCharacter:active {
+  background-color: #6d4a2e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
-.scroll3{
-    position: absolute; top: 15px;  left:1550px;
-    width: 350px; height: 350px;
+#startButton {
+  font-family: "Bilbo Swash Caps";
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #946137;
+  border: 1px solid black;
+  border-radius: 2rem;
+  box-shadow: 0 10px #999;
+  position: absolute;
+  top: 830px;
+  left: 45vw;
 }
 
-.scroll4{
-    position: absolute; top: 400px;  left:1550px;
-    width: 350px; height: 520px;
+#startButton:hover {
+  background-color: #6d4a2e;
+}
+
+#startButton:active {
+  background-color: #6d4a2e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#description {
+  font-size: 22px;
+  position: absolute;
+  top: -70px;
+  left: -92px;
+  width: 500px;
+}
+
+.Statistics {
+  position: absolute;
+  top: 50px;
+  left: -75px;
+  font-size: 22px;
+}
+
+.scroll {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 350px;
+  height: 300px;
+}
+.scroll2 {
+  position: absolute;
+  top: 350px;
+  left: 10px;
+  width: 350px;
+  height: 480px;
+}
+
+.scroll3 {
+  position: absolute;
+  top: 15px;
+  left: 1550px;
+  width: 350px;
+  height: 350px;
+}
+
+.scroll4 {
+  position: absolute;
+  top: 400px;
+  left: 1550px;
+  width: 350px;
+  height: 520px;
+}
+
+#title {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  font-size: 90px;
+  color: black;
+  outline: black;
+  text-align: center;
 }
 

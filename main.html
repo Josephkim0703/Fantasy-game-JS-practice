@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="main.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+    <title>Main page</title>
+</head>
+<body>
+<div class="content">
+    <h1 id="title">Chronicles of Fate</h1>
+</div>
+
+  <a href="index.html" id="load" > <button id="createCharacter"><b>Create Character</b></button></a> 
+
+<script>
+
+    document.getElementById('load').addEventListener('click', function(event){
+        event.preventDefault();
+
+        window.location.href = this.getAttribute('href')
+    });
+</script>
+</body>
+</html>
