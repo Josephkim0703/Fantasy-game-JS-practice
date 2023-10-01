@@ -1,5 +1,5 @@
 onload = function(){
-/*
+
 window.alert("Hello fellow traveler! Welcome to Alexandria");
 window.alert("Your Journey begins here. I will ask a serious of questions to get to know you");
 
@@ -59,7 +59,7 @@ else{
     window.alert("ERROR! Must be a Valid Age!");
 }
 }while(age != age > 0 || age <= 100);
-*/
+
 //Race generator
 window.alert("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
 
@@ -1042,7 +1042,7 @@ function reRoll(){
         window.alert("Please enter yes or no");
     } 
     }while(answer!== "yes" && answer!== "no");
-    }
+}
 }
 
 
