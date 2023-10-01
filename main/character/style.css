@@ -1,0 +1,200 @@
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+}
+
+.box {
+  position: absolute;
+  top: 50vh;
+  left: 1vw;
+  width: 300px;
+  height: 400px;
+}
+h1 {
+  font-family: "Bilbo Swash Caps";
+}
+p {
+  font-family: "Bilbo Swash Caps";
+}
+
+.info {
+  font-size: 35px;
+  position: absolute;
+  top: -25px;
+  left: 75px;
+}
+
+ul {
+  font-size: 20px;
+  color: var(--secondary-color);
+  position: absolute;
+  top: 30px;
+  left: 35px;
+}
+li {
+  font-family: "Bilbo Swash Caps";
+  margin: 0px 0 14px 0;
+}
+
+.info1 {
+  font-size: 25px;
+}
+img {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  border: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#ya {
+  font-size: 30px;
+  position: absolute;
+  left: 90px;
+  top: 60px;
+}
+h3 {
+  font-family: "Bilbo Swash Caps";
+  font-size: 25px;
+  position: relative;
+  top: 95px;
+  left: 67px;
+}
+#ageRace {
+  font-size: 25px;
+  position: absolute;
+  top: 96px;
+  left: 130px;
+}
+
+#raceAge {
+  font-size: 30px;
+  position: absolute;
+  top: 145px;
+  left: 115px;
+}
+
+#conversion {
+  font-size: 25px;
+  position: absolute;
+  top: 209px;
+  left: 160px;
+}
+
+.classBox {
+  position: absolute;
+  top: 70px;
+  left: 1620px;
+}
+
+.c {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+}
+
+#cc {
+  position: absolute;
+  left: 90px;
+  top: -6px;
+  font-size: 30px;
+}
+
+#classImg {
+  z-index: 100;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 65px;
+  left: 35px;
+}
+
+.stats {
+  position: absolute;
+  top: 485px;
+  left: 1678px;
+  font-size: 20px;
+}
+
+#startButton {
+  font-family: "Bilbo Swash Caps";
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #946137;
+  border: 1px solid black;
+  border-radius: 2rem;
+  box-shadow: 0 10px #999;
+  position: absolute;
+  top: 830px;
+  left: 45vw;
+}
+
+#startButton:hover {
+  background-color: #6d4a2e;
+}
+
+#startButton:active {
+  background-color: #6d4a2e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#description {
+  font-size: 22px;
+  position: absolute;
+  top: -70px;
+  left: -92px;
+  width: 500px;
+}
+
+.Statistics {
+  position: absolute;
+  top: 50px;
+  left: -75px;
+  font-size: 22px;
+}
+
+.scroll {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  width: 350px;
+  height: 300px;
+}
+.scroll2 {
+  position: absolute;
+  top: 350px;
+  left: 10px;
+  width: 350px;
+  height: 480px;
+}
+
+.scroll3 {
+  position: absolute;
+  top: 15px;
+  left: 1550px;
+  width: 350px;
+  height: 350px;
+}
+
+.scroll4 {
+  position: absolute;
+  top: 400px;
+  left: 1550px;
+  width: 350px;
+  height: 520px;
+}
+
+
+
