@@ -1,82 +1,98 @@
-
-body{ 
- overflow: hidden;
- margin: 0;
+body {
+  overflow: hidden;
+  margin: 0;
+}
+.zoom{
+transition: all 8s;
+position: relative; top: 0;
+}
+.zoomed{
+position: relative; top: 1800px;
+transform: scale(5);
 }
 
-video{
- z-index: -100;
- pointer-events: none;
-    
+.content{
+ transition: opacity 4s;
+ opacity: 1;
+}
+
+video {
+  z-index: -100;
+  pointer-events: none;
 }
 #title {
-z-index: 100;
-    font-family: "IM Fell English SC";
-    font-weight: 900;
-    font-size: 90px;
-    color: black;
-    text-align: center;
-    position: absolute; top: 230px; left: 450px;
-    
-  }
-#shadow{
-z-index: 1;
-    font-family: "IM Fell English SC";
-    font-weight: 900;
-    font-size: 91px;
-    color: white;
-    text-align: center;
-    position: absolute; top: 230px; left: 445px;
+  z-index: 100;
+  font-family: "IM Fell English SC";
+  font-weight: 900;
+  font-size: 90px;
+  color: black;
+  text-align: center;
+  position: absolute;
+  top: 230px;
+  left: 450px;
 }
-.line1{
-    border: 2px solid;
-    color: rgba(228, 137, 0, 0.61);
-    border-radius: 2rem;
-    width: 200px;
-    position: absolute; top: 45%; left: 30%;
-   
+#shadow {
+  z-index: 1;
+  font-family: "IM Fell English SC";
+  font-weight: 900;
+  font-size: 91px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 230px;
+  left: 445px;
 }
-
-.line2{
-    border: 2px solid;
-    color: rgba(228, 137, 0, 0.61);
-    border-radius: 2rem;
-    width: 200px;
-    position: absolute; top: 45vh; left: 59vw;
+.line1 {
+  border: 2px solid;
+  color: rgba(228, 137, 0, 0.61);
+  border-radius: 2rem;
+  width: 200px;
+  position: absolute;
+  top: 45%;
+  left: 30%;
 }
 
-#description{
-    font-family: "Bilbo Swash Caps";
-    font-size: 50px;
-    position: absolute; top: 37%; left: 42.5%;
-    
-  
+.line2 {
+  border: 2px solid;
+  color: rgba(228, 137, 0, 0.61);
+  border-radius: 2rem;
+  width: 200px;
+  position: absolute;
+  top: 45vh;
+  left: 59vw;
 }
 
-  #createCharacter {
-    font-family: "Bilbo Swash Caps";
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    color: #000000;
-    background-color: #946137;
-    border: 1px solid black;
-    border-radius: 2rem;
-    box-shadow: 0 8px #999;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-  }
-  
-  #createCharacter:hover {
-    background-color: #6d4a2e;
-  }
-  
-  #createCharacter:active {
-    background-color: #6d4a2e;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-  
+#description {
+  font-family: "Bilbo Swash Caps";
+  font-size: 50px;
+  position: absolute;
+  top: 37%;
+  left: 42.5%;
+}
+
+#createCharacter {
+  font-family: "Bilbo Swash Caps";
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  background-color: #946137;
+  border: 1px solid black;
+  border-radius: 2rem;
+  box-shadow: 0 8px #999;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+
+#createCharacter:hover {
+  background-color: #6d4a2e;
+}
+
+#createCharacter:active {
+  background-color: #6d4a2e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

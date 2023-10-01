@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css"> 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet"/>
     <title>Main page</title>
-</head>
-<body>
+  </head>
+  <body>
+    <video class="zoom" src="./assets/TensorPix - background.mp4" width="100%"  height="100%" controls autoplay loop muted></video>
+
     <div class="content">
-<video src="./assets/TensorPix - background.mp4" width="100%" height="100%" controls autoplay loop muted></video>    
-
-    <h1 id="title">CHRONICLES OF FATE</h1>
-    <h1 id="shadow">CHRONICLES OF FATE</h1>
-    <h2 id="description">Choose your destiny</h2>
-    <div class="line1"></div>
-    <div class="line2"></div>
+      <h1 id="title">CHRONICLES OF FATE</h1>
+      <h1 id="shadow">CHRONICLES OF FATE</h1>
+      <h2 id="description">Choose your destiny</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <a href="./character/index.html" id="load">
+        <button id="createCharacter"><b>Start Game</b></button></a
+      >
+    </div>
     
-</div>
-  <a href="./character/index.html" id="load" > <button id="createCharacter"><b>Start Game</b></button></a> 
 
+    <script>
+      document.getElementById("load").addEventListener("click", function () {
+          event.preventDefault();
+         document.querySelector(".content").style.opacity = 0;
+         document.querySelector(".zoom").classList.toggle("zoomed");
 
-
-<script>
-    document.getElementById("load").addEventListener("click", function(event) {
-    event.preventDefault(); 
-
-    setTimeout(function() {
-      window.location.href = "./character/index.html";
-    }, 5000);
-
-  });
-</script>
-</body>
+          setTimeout(function() {
+            window.location.href = "./character/index.html";
+          }, 5000);
+        });
+    </script>
+  </body>
 </html>

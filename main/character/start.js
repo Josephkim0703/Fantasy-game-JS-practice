@@ -1,5 +1,5 @@
-
-
+onload = function(){
+/*
 window.alert("Hello fellow traveler! Welcome to Alexandria");
 window.alert("Your Journey begins here. I will ask a serious of questions to get to know you");
 
@@ -59,18 +59,21 @@ else{
     window.alert("ERROR! Must be a Valid Age!");
 }
 }while(age != age > 0 || age <= 100);
-
+*/
 //Race generator
 window.alert("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
 
-const RACE = Math.floor(Math.random() * 5) + 1;
-let ageType;
+characterMaker();
 
+function characterMaker(){
+let RACE = Math.floor(Math.random() * 5) + 1;
+let ageType;
+ 
 switch (RACE){
 
 case 1 :
     ageType = age;
-    window.alert("You are a Human! Goodluck out there Human's have it the hardest, but are the most customizable");
+    window.alert("You are a Human! Goodluck out there Human's have it the hardest\nHumans start out with 5 less stats in every category then other races");
     document.getElementById("race").innerHTML = "Human";
     document.getElementById("ageRace").innerHTML = "Human";
     document.getElementById("raceAge").innerHTML = age;
@@ -80,7 +83,7 @@ break;
 
 case 2 :
     ageType = age + 5; 
-    window.alert("You are a Dwarf! Dwarf's have high intelligence and dexterity");
+    window.alert("You are a Dwarf! Dwarf's give +2 dexterity and  intelligence");
     document.getElementById("race").innerHTML = "Dwarf";
      document.getElementById("ageRace").innerHTML = "Dwarf";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -90,7 +93,7 @@ break;
 
 case 3 :
     ageType =  age *3;
-    window.alert("You are an Elf! Elf's are crazy sharpshooters and are amazing with any projectile weopon");
+    window.alert("You are an Elf! Elf's give +2 aim and stamina");
     document.getElementById("race").innerHTML = "Elf";
      document.getElementById("ageRace").innerHTML = "Elf";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -100,7 +103,7 @@ break;
 
 case 4 :
     ageType=   age * 2;
-    window.alert("You are a Beastmen! So cool your a beastmen, beastmen have amazing stamina and strength");
+    window.alert("You are a Beastmen! Beastmen give +2 stamina and strength");
     document.getElementById("race").innerHTML = "Beastmen";
      document.getElementById("ageRace").innerHTML = "Beastmen";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -110,7 +113,7 @@ break;
 
 case 5 :
     ageType=   age * 5;
-    window.alert("What your a halfling? thats extremely rare. Half human Half demon! having amazing mana reserves and extremely powerful");
+    window.alert("What your a halfling? Thats extremely rare, Half human Half demon!\nHalfling gives +1 everything and +2 mana and strength");
     document.getElementById("race").innerHTML = "Halfling";
      document.getElementById("ageRace").innerHTML = "Halfling";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -121,7 +124,7 @@ break;
 
 //Class generator
 window.alert("You will now be given a random class \n Options: \n -Warrior \n -Archer \n -Mage \n -Healer \n -Assassin \n -Barbarian \n -Craftsmen \n RARE: Archetype");
-const cL = Math.floor(Math.random() * 8) + 1;
+let cL = Math.floor(Math.random() * 8) + 1;
 
 switch (cL){
    
@@ -161,21 +164,21 @@ case 5:
 break;
 
 case 6:
-    window.alert("Oh no your a Barbarian! You have extreme power and dexerity but your stats cap lower then all classes");
+    window.alert("Oh no your a Barbarian! You have extreme power and dexerity but you lack intelligence");
     document.getElementById("cL").innerHTML = "Barbarian";
     document.getElementById("cc").innerHTML = "Barbarian";
     document.getElementById("classImg").src = "./assets/barbarian.png";
 break;
 
 case 7:
-    window.alert("Interesting you are a Craftsmen! You have amazing crafting skills can dabble into all class type skills but lack in stamina and mana");
+    window.alert("Interesting you are a Craftsmen! You have amazing crafting skills but lack in stamina and mana");
     document.getElementById("cL").innerHTML = "Craftsmen";
     document.getElementById("cc").innerHTML = "Craftsmen";
     document.getElementById("classImg").src = "./assets/craftsmen.png";
 break;
 
 case 8:
-    window.alert("Wow this is the Rarest Class an Archetype! You have the capability of maxing out every stat category but your path will be the hardest");
+    window.alert("Wow this is the Rarest Class an Archetype! \nYou are given +5 in health, strength and aim and +10 in stamina, mana, dexterity, and intelligence");
     document.getElementById("cL").innerHTML = "Archetype";
     document.getElementById("cc").innerHTML = "Archetype";
     document.getElementById("classImg").src = "./assets/archetype.png";
@@ -1016,3 +1019,31 @@ if(RACE === 1){
         document.getElementById("intelligence").innerHTML = "Intelligence: "+ intelligence;
     }
   }
+}
+
+window.alert("Statistics are randomly generated from a combination of your race and class")
+
+setTimeout(reRoll, 1500);
+
+function reRoll(){
+    
+    let answer;
+    do{
+    answer = prompt("Would you like to use your 1 re-roll for your race and class \n!THIS WILL GIVE YOU DIFFERENT STATS!\nEnter yes or no");
+    answer = answer.toLowerCase();
+    if(answer === "yes"){
+        for(let attempt = 0; attempt <= 0 ; attempt += 1){
+        window.alert("You rolled again!");
+        characterMaker();
+        }
+    }else if(answer === "no"){
+    break;
+    }else{
+        window.alert("Please enter yes or no");
+    } 
+    }while(answer!== "yes" && answer!== "no");
+    }
+}
+
+
+

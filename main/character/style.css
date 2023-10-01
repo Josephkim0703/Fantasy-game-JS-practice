@@ -123,7 +123,7 @@ h3 {
   font-size: 20px;
 }
 
-#startButton {
+#reRole {
   font-family: "Bilbo Swash Caps";
   padding: 15px 25px;
   font-size: 24px;
@@ -140,11 +140,11 @@ h3 {
   left: 45vw;
 }
 
-#startButton:hover {
+#reRole:hover {
   background-color: #6d4a2e;
 }
 
-#startButton:active {
+#reRole:active {
   background-color: #6d4a2e;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
