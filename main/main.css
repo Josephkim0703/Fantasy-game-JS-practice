@@ -2,7 +2,28 @@ body {
   overflow: hidden;
   margin: 0;
 }
+
+.wrapper{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+ }
+ .container{
+  transition: opacity 4s;
+  opacity: 1;
+
+ }
+ video {
+  z-index: -100;
+  pointer-events: none;
+ 
+}
+
 .zoom{
+  opacity: 1;
 transition: all 8s;
 position: relative; top: 0;
 }
@@ -11,88 +32,270 @@ position: relative; top: 1800px;
 transform: scale(5);
 }
 
-.content{
- transition: opacity 4s;
- opacity: 1;
-}
 
-video {
-  z-index: -100;
-  pointer-events: none;
-}
-#title {
+.title{
+  font-size: 6rem;
+  color: black;
+  margin: 0;
   z-index: 100;
   font-family: "IM Fell English SC";
   font-weight: 900;
-  font-size: 90px;
-  color: black;
-  text-align: center;
-  position: absolute;
-  top: 230px;
-  left: 450px;
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 0 20px 0;
 }
-#shadow {
+.shadow {
   z-index: 1;
+  font-size: 6.03rem;
+  color: white;
+  margin: 0;
   font-family: "IM Fell English SC";
   font-weight: 900;
-  font-size: 91px;
-  color: white;
-  text-align: center;
-  position: absolute;
-  top: 230px;
-  left: 445px;
+  width: 100%;
+  position: fixed;
+  top: 40.2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 0 20px 0;
 }
+
+.description {
+  font-family: "Bilbo Swash Caps";
+  font-size: 4.5rem;
+  position: fixed;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+
 .line1 {
   border: 2px solid;
   color: rgba(228, 137, 0, 0.61);
   border-radius: 2rem;
-  width: 200px;
-  position: absolute;
-  top: 45%;
+  width: 300px;
+  z-index: -1;
+  position: fixed;
+  top: 47%;
   left: 30%;
+  transform: translate(-50%, -50%);
 }
 
 .line2 {
   border: 2px solid;
   color: rgba(228, 137, 0, 0.61);
   border-radius: 2rem;
-  width: 200px;
-  position: absolute;
-  top: 45vh;
-  left: 59vw;
+  width: 300px;
+  z-index: -1;
+  position: fixed;
+  top: 47%;
+  left: 70%;
+  transform: translate(-50%, -50%);
 }
 
-#description {
-  font-family: "Bilbo Swash Caps";
-  font-size: 50px;
-  position: absolute;
-  top: 37%;
-  left: 42.5%;
-}
 
-#createCharacter {
+
+#uiButton {
+  background: transparent;
+  border: 0px;
   font-family: "Bilbo Swash Caps";
-  padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  color: #000000;
-  background-color: #946137;
-  border: 1px solid black;
-  border-radius: 2rem;
-  box-shadow: 0 8px #999;
-  position: absolute;
-  top: 50%;
-  left: 45%;
+  color: #ffffff;
+  position: fixed;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+
 }
 
-#createCharacter:hover {
-  background-color: #6d4a2e;
+#uiButton:hover {
+
+ 
 }
 
-#createCharacter:active {
-  background-color: #6d4a2e;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+#uiButton:active {
+  width: 230px;
+  font-size: 22px;
+
+}
+
+@media only screen and (max-width: 1200px)  {
+
+  .title{
+    font-size: 5rem;
+    font-weight: 600;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .shadow {
+    font-size: 5rem;
+    position: absolute;
+    top: 35.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .description {
+    font-size: 3rem;
+    font-weight: 600;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+  }
+
+  #createCharacter {
+    font-size: 18px;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 40;
+  }
+
+  .line1 {
+    width: 250px;
+    position: absolute;
+    top: 42.5%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .line2 {
+    width: 250px;
+    position: absolute;
+    top: 42.5%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+@media only screen and (max-width: 1000px)  {
+
+  .title{
+    font-size: 4rem;
+    font-weight: 600;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .shadow {
+    font-size: 4rem;
+    position: absolute;
+    top: 35.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .description {
+    font-size: 3rem;
+    font-weight: 600;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+  }
+
+  #createCharacter {
+    font-size: 18px;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 40;
+  }
+
+  .line1 {
+    width: 250px;
+    position: absolute;
+    top: 42.5%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .line2 {
+    width: 250px;
+    position: absolute;
+    top: 42.5%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+@media only screen and (max-width: 576px) and (min-width: 500px) {
+
+   
+
+   .title{
+    font-size: 35px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .shadow {
+    font-size: 35px;
+    position: absolute;
+    top: 35.3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .description {
+    font-size: 20px;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+  }
+
+  #createCharacter {
+    font-size: 13px;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 40px;
+  }
+
+  .line1 {
+    width: 100px;
+    position: absolute;
+    top: 42.5%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .line2 {
+    width: 100px;
+    position: absolute;
+    top: 42.5%;
+    left: 76%;
+    transform: translate(-50%, -50%);
+  }
+
+  #createCharacter:active {
+    background-color: #6d4a2e;
+    font-size: 12px;
+    width: 90px;
+    height: 30px;
+  }
 }

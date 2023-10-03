@@ -1,14 +1,22 @@
-onload = function(){
 
-window.alert("Hello fellow traveler! Welcome to Alexandria");
-window.alert("Your Journey begins here. I will ask a serious of questions to get to know you");
 
+document.querySelector(".fade").style.opacity = 1;
+
+
+
+
+
+ dialog();
+
+
+
+function info(){
 //Name uppercases the first letter
 let name;
 
 do{
 name = prompt("What is your name fellow traveler?");
-name = name.toLowerCase()
+name = name.toLowerCase();
 let firstLetter = name.slice(0, 1);
 firstLetter = firstLetter.toUpperCase();
 name = firstLetter + name.slice(1);
@@ -20,6 +28,8 @@ document.getElementById("name").innerHTML = name;
 window.alert("ERROR! Please input a Valid name!");
 }
 }while(name == "");
+
+
 
 //Gender loop for when someone types something other then male or female
 let gender;
@@ -59,6 +69,8 @@ else{
     window.alert("ERROR! Must be a Valid Age!");
 }
 }while(age != age > 0 || age <= 100);
+
+
 
 //Race generator
 window.alert("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");

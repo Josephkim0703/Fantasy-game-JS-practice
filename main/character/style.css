@@ -15,11 +15,41 @@ body {
   width: 300px;
   height: 400px;
 }
+
 h1 {
   font-family: "Bilbo Swash Caps";
 }
+
 p {
   font-family: "Bilbo Swash Caps";
+}
+
+.title{
+  z-index: 100;
+  font-family: "IM Fell English SC";
+  font-weight: 900;
+  font-size: 90px;
+  color: black;
+  text-align: center;
+  position: absolute; top: 12px; left: 650px;
+  margin:0;
+
+}
+
+.shadow {
+  z-index: 1;
+  font-family: "IM Fell English SC";
+  font-weight: 900;
+  font-size: 91px;
+  color: white;
+  text-align: center;
+  position: absolute; top: 10px; left: 646px;
+  margin:0;
+}
+
+.fade{
+  opacity: 0;
+  transition: opacity 5s;
 }
 
 .info {
@@ -197,4 +227,21 @@ h3 {
 }
 
 
+.text{
+border: 3px  solid black;
+border-radius: 1rem ;
+width: 500px; 
+font-size: 1.5vw;
+word-spacing: 0.1rem;
+margin: 0;
+background: rgba(255, 255, 255, 0.644);
+padding:1em;
+position: relative; top: 100px; left: 650px;
+line-height: 1.2em;
 
+}
+
+
+.text:before{
+opacity: 0;
+}

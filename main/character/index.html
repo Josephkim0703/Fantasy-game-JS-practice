@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ruthie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xxjapp/xdialog@3/xdialog.min.css"/>
     <title>Document</title>
     
 </head>
@@ -17,6 +19,12 @@
     <img class='scroll2' src="./assets/scroll-transparent-png-13.png" >
     <img class='scroll3' src="./assets/scroll-transparent-png-13.png" >
     <img class='scroll4' src="./assets/scroll-transparent-png-13.png" >
+
+
+<div class="fade">
+    <h1 class="title">THE TAVERN</h1>
+    <h1 class="shadow">THE TAVERN</h1>
+</div>
 
 <div class="ageConverter">
     <h1 id="ya">Race Age Converter</h1>
@@ -65,14 +73,16 @@
 </div>
 
 <div class="starter">
-  
-  
    <button id="startButton" ><b>Start Game</b></button>
    </div>
-    
 
+   <div class="text">
+    <div id="dialog-content"></div>
+ 
+</div>
+
+<script src="dialog.js"></script>
     <script  src="start.js"></script>
-    <script  src="stats.js"></script>
-    <script src="title.js"></script>
+    </script>
 </body>
 </html>
