@@ -1,17 +1,14 @@
 function dialog(){
 
-
-
-
-
-
 const dialogContent = document.getElementById('dialog-content');
-const dialogues = [
+let dialogues = [
     "Hello there traveler!",
     "Welcome to Alexadria.",
     "Are you ready to embark on a journey?",
     "I will ask a serious of questions to get to know you",
-"What is your name fellow traveler?",
+"What is your name fellow traveler?", document.getElementById("input").value,
+`What a great name ${name}`
+
 ];
 
 let currentDialogueIndex = 0;

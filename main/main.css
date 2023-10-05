@@ -136,6 +136,7 @@ transform: scale(5);
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   .shadow {
     font-size: 5rem;
@@ -143,6 +144,7 @@ transform: scale(5);
     top: 40.3%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .description {
@@ -152,6 +154,7 @@ transform: scale(5);
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
    
   }
 
@@ -163,6 +166,7 @@ transform: scale(5);
     transform: translate(-50%, -50%);
     width: 120px;
     height: 40;
+    transition: 0.2s;
   }
 
   .line1 {
@@ -171,6 +175,7 @@ transform: scale(5);
     top: 47%;
     left: 33%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .line2 {
@@ -179,6 +184,7 @@ transform: scale(5);
     top: 47%;
     left: 67%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
 
 }
@@ -191,6 +197,7 @@ transform: scale(5);
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   .shadow {
     font-size: 4rem;
@@ -198,6 +205,7 @@ transform: scale(5);
     top: 40.3%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .description {
@@ -206,6 +214,7 @@ transform: scale(5);
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
    
   }
 
@@ -217,6 +226,7 @@ transform: scale(5);
     transform: translate(-50%, -50%);
     width: 120px;
     height: 40;
+    transition: 0.2s;
   }
 
   .line1 {
@@ -225,6 +235,7 @@ transform: scale(5);
     top: 46%;
     left: 36%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .line2 {
@@ -233,6 +244,7 @@ transform: scale(5);
     top: 46%;
     left: 64%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
 
 }
@@ -245,6 +257,7 @@ transform: scale(5);
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   .shadow {
     font-size: 3.5rem;
@@ -252,6 +265,7 @@ transform: scale(5);
     top: 40.3%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .description {
@@ -260,6 +274,7 @@ transform: scale(5);
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
    
   }
 
@@ -271,6 +286,7 @@ transform: scale(5);
     transform: translate(-50%, -50%);
     width: 120px;
     height: 40;
+    transition: 0.2s;
   }
 
   .line1 {
@@ -279,6 +295,7 @@ transform: scale(5);
     top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .line2 {
@@ -287,6 +304,7 @@ transform: scale(5);
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
 
 }
@@ -299,6 +317,7 @@ transform: scale(5);
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   .shadow {
     font-size: 3rem;
@@ -306,6 +325,7 @@ transform: scale(5);
     top: 40.3%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .description {
@@ -315,6 +335,7 @@ transform: scale(5);
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
    
   }
 
@@ -326,22 +347,27 @@ transform: scale(5);
     transform: translate(-50%, -50%);
     width: 120px;
     height: 40;
+    transition: 0.2s;
   }
 
   .line1 {
+    border: 3px solid;
     width: 35rem;
     position: absolute;
     top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .line2 {
+    border: 3px solid;
     width: 35rem;
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
 
 }
@@ -356,6 +382,7 @@ transform: scale(5);
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   .shadow {
     font-size: 2.5rem;
@@ -363,6 +390,7 @@ transform: scale(5);
     top: 40.3%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .description {
@@ -372,6 +400,7 @@ transform: scale(5);
     top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
    
   }
 
@@ -383,21 +412,26 @@ transform: scale(5);
     transform: translate(-50%, -50%);
     width: 120px;
     height: 40;
+    transition: 0.2s;
   }
 
   .line1 {
+    border: 3px solid;
     width: 30rem;
     position: absolute;
     top: 49%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
   
   .line2 {
+    border: 3px solid;
     width: 30rem;
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.2s;
   }
 }

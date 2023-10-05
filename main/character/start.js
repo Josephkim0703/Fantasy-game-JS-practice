@@ -2,15 +2,6 @@
 
 document.querySelector(".fade").style.opacity = 1;
 
-
-
-
-
- dialog();
-
-
-
-function info(){
 //Name uppercases the first letter
 let name;
 
@@ -1055,7 +1046,7 @@ function reRoll(){
     } 
     }while(answer!== "yes" && answer!== "no");
 }
-}
+
 
 
 

@@ -14,11 +14,10 @@
     
 </head>
 <body>
-    <img src="./assets/maxresdefault.jpg" alt="" no-repeat >
-    <img class="scroll" src="./assets/scroll-transparent-png-13.png">
-    <img class='scroll2' src="./assets/scroll-transparent-png-13.png" >
-    <img class='scroll3' src="./assets/scroll-transparent-png-13.png" >
-    <img class='scroll4' src="./assets/scroll-transparent-png-13.png" >
+    <div class="wrapper">
+
+    <img src="./assets/maxresdefault.jpg" class="backgroundImg"  no-repeat>
+
 
 
 <div class="fade">
@@ -26,17 +25,30 @@
     <h1 class="shadow">THE TAVERN</h1>
 </div>
 
+<main class="m1">
+
 <div class="ageConverter">
+<img src="./assets/scroll-transparent-png-13.png">
     <h1 id="ya">Race Age Converter</h1>
-        <h3>Race:</h3>
+        <h2>Race:</h2>
         <h3  id="ageRace"></h3>
-        <h3>Age:</h3>
+        <h2>Age:</h2>
         <h3  id="raceAge"></h3>
-        <h3>Conversion:</h3>
+        <h2>Conversion:</h2>
         <h3 id="conversion"></h3>
 </div>
-  
+
+<div class="classBox">
+    <img src="./assets/scroll-transparent-png-13.png" >
+    <h1 class="c">Class:</h1>
+        <h1 id="cc"></h1>
+            <img id="classImg"/>
+</div>
+</main>
+
+<main class="m2">
 <div class="box">
+    <img src="./assets/scroll-transparent-png-13.png" >
     <h1 class="info">Your Information</h1>
     <ul class="info1">
         <b>
@@ -49,16 +61,10 @@
     </ul>
 </div>
 
-
-<div class="classBox">
-    <h1 class="c">Class:</h1>
-        <h3 id="cc"></h3>
-            <img id="classImg"/>
-</div>
-
 <div class="stats">
-    <b><p id="description"></p></b>
+    <img src="./assets/scroll-transparent-png-13.png" >
     <h1 class="stat">Statistics</h1>
+     <h2 id="description"></h2>
     <ul class="Statistics">
         <b>
         <li id="health"></li>
@@ -71,6 +77,14 @@
         </b>
     </ul>
 </div>
+</main>
+
+<header class="head">
+<a href=""> Age Converter</a>
+<a href="">Information</a>
+<a href="">Class</a>
+<a href="">Statistics</a>
+</header>
 
 <div class="starter">
    <button id="startButton" ><b>Start Game</b></button>
@@ -78,11 +92,12 @@
 
    <div class="text">
     <div id="dialog-content"></div>
- 
 </div>
 
+</div>
+
+<h1 class="shrink">STOP SHRINKING THE PAGE</h1>
 <script src="dialog.js"></script>
     <script  src="start.js"></script>
-    </script>
 </body>
 </html>
