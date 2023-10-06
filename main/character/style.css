@@ -1,6 +1,10 @@
 body {
  overflow: hidden;
   margin: 0;
+  max-width: 1920px;
+max-height: 1080px;
+min-width: 1100px;
+min-height: 700px;
 }
 
 .fade{
@@ -9,19 +13,16 @@ body {
 
 }
 
-.wrapper{
-max-width: 1920px;
-max-height: 1080px;
-min-width: 1100px;
-min-height: 700px;
-}
 
 .backgroundImg{
+  max-width: 1920px;
+  max-height: 1080px;
   width: 1920px;
   height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: fixed;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%); 
   z-index: -100;
   margin: 0;
   padding: 0;
@@ -40,8 +41,8 @@ min-height: 700px;
   position: fixed;
   top: 7%;
   left: 50%;
- transform: translate(-50%, -50%);
- padding: 20px 0 20px 0;
+  transform: translate(-50%, -50%);
+  padding: 20px 0 20px 0;
   text-align: center;
   
 }
@@ -75,32 +76,46 @@ min-height: 700px;
   position: fixed; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.2em;
-
+  }
+.answers input{
+  text-align: center;
+  font-family: "IM Fell English SC";
+  border: 3px  solid black;
+  border-radius: 1rem ;
+  width: 660px;
+  height: 100px;
+  font-size: 25px;
+  word-spacing: 0.1rem;
+  margin: 0;
+  background: rgba(255, 255, 255, 1);
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.2em;
+  opacity: 0;
   }
 
 main{
+  
+  
   justify-content: space-between;
   display: flex;
   flex-direction:row;
   padding:0px;
-  width: 100%;
   height: auto;
 }
 .m1{
 height: 400px;
 }
-
 .m2{
 position: relative; top: 50px;
 }
-
 
 .ageConverter{
   font-family: "IM Fell English SC";
 }
 
 .box{
-
+height: 400px;
   font-family: "IM Fell English SC";
 }
 
@@ -258,13 +273,13 @@ header{
   margin: 0;
   background: rgb(255, 255, 255, 0.6);
   padding:1em;
-  position: fixed; top: 95%; left: 50%;
+  position: fixed; top: 93%; left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.2em;
   opacity: 0;
 }
 
-header a{
+header button{
   text-decoration: none;
   padding: 0px 15px;
   color: white;
@@ -274,13 +289,18 @@ header a{
   border-radius: 1rem;
   font-family: "IM Fell English SC";
   font-size: 35px;
-  margin: 0px 15px 0px 15px;
+  margin: 0px 15px ;
 }
 
-header a:hover {
-  padding: 5px 20px;
-  border-radius: 1.5rem;
+header button:hover {
+  color: rgb(0, 0, 0);
+  background-color: #ce8b55;
 }
+
+
+
+
+
 
 .shrink{
   font-size: 6rem;
@@ -291,7 +311,7 @@ header a:hover {
   position: fixed;
   top: 50%;
   left: 50%;
- transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   opacity: 0;
 }
@@ -320,9 +340,9 @@ header a:hover {
   
 }
 
-
-
 @media only screen  and (max-width: 1300px){
+  
+  
   .title{
     font-size: 4rem;
     transition: 0.5s;
@@ -356,9 +376,49 @@ header a:hover {
     .stats {
       transition:  0.8s;
     }
+
 }
 
 @media only screen  and (max-width: 1200px) {
+
+  .moved{
+    height: 400px;
+    z-index: 1000;
+    position: relative; top: 50%; left: 65%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .moved1{
+    height: auto;
+    z-index: 1000;
+    position: relative; top: 200px; left: -770px;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.5s;
+
+  }
+
+  .moved2{
+    height: 500px;
+    z-index: 1000;
+    position: relative; top: -300px; left: 65%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .moved3{
+    height: 500px;
+    z-index: 1000;
+    position: relative; top: -300px; left: -760px;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: 0.5s;
+
+  }
+
   .title{
     font-size: 6rem;
     transition: 0.5s;
@@ -443,7 +503,16 @@ header a:hover {
 }
 
 @media only screen  and (max-height: 1050px){
+ 
+  .moved2{
+  top: -200px; 
+  }
 
+  .moved3{
+  top: -200px; 
+  
+
+  }
   .title{
     transition: 0.5s;
   }
@@ -484,9 +553,64 @@ header a:hover {
     .m2{
       transition: 0.7s;
       }
+
+      .ageConverter{
+        transition:  0.8s;
+      }
+      
+      .classBox {
+        transition:  0.8s;
+      }
+      .box{
+        transition:  0.8s;
+      }
+  
+      .stats {
+        transition:  0.8s;
+      }
+
+      .text{
+       z-index: -100;
+        }
 }
 
 @media only screen  and (max-height: 820px) and (min-height: 700px){
+  .moved{
+    height: 400px;
+    z-index: 1000;
+    position: relative; top: 170%; left: 40%;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .moved1{
+    height: auto;
+    z-index: 1000;
+    position: relative; top: 700px; left: -740px;
+    opacity: 1;
+    transition: 0.5s;
+
+  }
+
+  .moved2{
+    height: 500px;
+    z-index: 1000;
+    position: relative; top: -1050px; left: 40%;
+
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  .moved3{
+    height: 500px;
+    z-index: 1000;
+    position: relative; top: -560px; left: -740px;
+  
+    opacity: 1;
+    transition: 0.5s;
+
+  }
+
   .title{
     font-size: 7rem;
     transition: 0.5s;

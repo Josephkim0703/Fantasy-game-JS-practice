@@ -80,18 +80,23 @@
 </main>
 
 <header class="head">
-<a href=""> Age Converter</a>
-<a href="">Information</a>
-<a href="">Class</a>
-<a href="">Statistics</a>
+<button id="ageButton">Age Converter</button>
+<button id="infoButton">Information</button>
+<button id="classButton">Class type</button>
+<button id="statButton">Statistics</button>
 </header>
-
+<!-- 
 <div class="starter">
    <button id="startButton" ><b>Start Game</b></button>
    </div>
-
+-->
    <div class="text">
     <div id="dialog-content"></div>
+
+</div>
+
+<div class="answers">
+<input type="text" id="text-input">
 </div>
 
 </div>
@@ -99,5 +104,67 @@
 <h1 class="shrink">STOP SHRINKING THE PAGE</h1>
 <script src="dialog.js"></script>
     <script  src="start.js"></script>
+
+    <script>
+        
+let  hold = false;
+
+document.getElementById("ageButton").addEventListener ('mousedown', () =>{
+ hold = true
+    document.querySelector(".ageConverter").classList.toggle('moved');
+
+});
+
+document.getElementById("ageButton").addEventListener ('mouseup', () =>{
+ hold = false
+    document.querySelector(".ageConverter").classList.toggle('moved');
+
+});
+
+
+
+
+document.getElementById("infoButton").addEventListener ('mousedown', () =>{
+ hold = true
+    document.querySelector(".box").classList.toggle('moved2');
+
+});
+
+document.getElementById("infoButton").addEventListener ('mouseup', () =>{
+ hold = false
+    document.querySelector(".box").classList.toggle('moved2');
+
+});
+
+
+
+document.getElementById("classButton").addEventListener ('mousedown', () =>{
+ hold = true
+    document.querySelector(".classBox").classList.toggle('moved1');
+
+});
+
+document.getElementById("classButton").addEventListener ('mouseup', () =>{
+ hold = true
+    document.querySelector(".classBox").classList.toggle('moved1');
+
+});
+
+
+
+document.getElementById("statButton").addEventListener ('mousedown', () =>{
+ hold = true
+    document.querySelector(".stats").classList.toggle('moved3');
+
+});
+
+document.getElementById("statButton").addEventListener ('mouseup', () =>{
+ hold = true
+    document.querySelector(".stats").classList.toggle('moved3');
+
+});
+
+
+    </script>
 </body>
 </html>

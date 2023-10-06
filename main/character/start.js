@@ -4,14 +4,26 @@ document.querySelector(".fade").style.opacity = 1;
 
 //Name uppercases the first letter
 let name;
+let gender;
+let age;
+let RACE;
+let cL;
 
+dialog();
+
+function popup(){
+    document.querySelector(".answer input").style.opacity = 1;
+
+}
+/*
+function nameMaker() {
 do{
-name = prompt("What is your name fellow traveler?");
+
+name = document.getElementById("text-input").value 
 name = name.toLowerCase();
 let firstLetter = name.slice(0, 1);
 firstLetter = firstLetter.toUpperCase();
 name = firstLetter + name.slice(1);
-
 if(name){
 window.alert(`What a fine name ${name}!`);
 document.getElementById("name").innerHTML = name;
@@ -19,11 +31,11 @@ document.getElementById("name").innerHTML = name;
 window.alert("ERROR! Please input a Valid name!");
 }
 }while(name == "");
-
-
-
+}
+/*
 //Gender loop for when someone types something other then male or female
-let gender;
+/*
+function genderMaker() {
 
 do{
 gender = prompt("What might your gender be, traveler " + "\n Please type male or female");
@@ -39,8 +51,9 @@ else{
 }while( gender !=  "female" || "male" );
 
 //Age loop if someone doesnt type a number
-let age;
+}
 
+function ageMaker() {
 do{
 
  age = prompt("What is your age?");
@@ -61,15 +74,16 @@ else{
 }
 }while(age != age > 0 || age <= 100);
 
-
-
+}
+*/
+/*
 //Race generator
 window.alert("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
 
 characterMaker();
 
 function characterMaker(){
-let RACE = Math.floor(Math.random() * 5) + 1;
+RACE = Math.floor(Math.random() * 5) + 1;
 let ageType;
  
 switch (RACE){
@@ -127,7 +141,7 @@ break;
 
 //Class generator
 window.alert("You will now be given a random class \n Options: \n -Warrior \n -Archer \n -Mage \n -Healer \n -Assassin \n -Barbarian \n -Craftsmen \n RARE: Archetype");
-let cL = Math.floor(Math.random() * 8) + 1;
+cL = Math.floor(Math.random() * 8) + 1;
 
 switch (cL){
    
@@ -1046,7 +1060,72 @@ function reRoll(){
     } 
     }while(answer!== "yes" && answer!== "no");
 }
+*/
 
+function dialog(){
+
+    let dialogContent = document.getElementById('dialog-content');
+    
+    
+    let dialogues = [
+        "Hello there traveler!",
+        "Welcome to Alexadria.",
+        "Are you ready to embark on a journey?",
+        "I will ask a serious of questions to get to know you",
+        "What is your name fellow traveler?" ,
+        "Press enter to type" 
+    ];
+
+    
+
+
+
+
+    
+     let nameAnswer = `What a great name ${name}`
+
+    
+    
+    let currentDialogueIndex = 0;
+    
+    function showDialogue() {
+        if(currentDialogueIndex < dialogues.length) {
+            dialogContent.innerHTML = dialogues[currentDialogueIndex];
+            currentDialogueIndex++; 
+        } else {
+        popup();
+      
+        }
+    }
+    
+
+    
+    
+    function openDialogueBox() {
+        currentDialogueIndex = 0;
+        dialogContent.innerHTML = '';
+        showDialogue();
+        document.querySelector('.text').style.display = 'block';
+    
+    }
+    
+    function closeDialogueBox() {
+        document.querySelector('.text').style.display = 'none';
+    
+    }
+    
+    
+    
+    // Add event listener for the Enter key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "Enter") {
+            showDialogue();
+        }
+    });
+    
+    
+    openDialogueBox();
+    }
 
 
 
