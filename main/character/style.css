@@ -273,7 +273,7 @@ header{
   margin: 0;
   background: rgb(255, 255, 255, 0.6);
   padding:1em;
-  position: fixed; top: 93%; left: 50%;
+  position: fixed; top: 7%; left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.2em;
   opacity: 0;
@@ -384,7 +384,7 @@ header button:hover {
   .moved{
     height: 400px;
     z-index: 1000;
-    position: relative; top: 50%; left: 65%;
+    position: relative; top: 60%; left: 65%;
     transform: translate(-50%, -50%);
     opacity: 1;
     transition: 0.5s;
@@ -393,7 +393,7 @@ header button:hover {
   .moved1{
     height: auto;
     z-index: 1000;
-    position: relative; top: 200px; left: -770px;
+    position: relative; top: 250px; left: -750px;
     transform: translate(-50%, -50%);
     opacity: 1;
     transition: 0.5s;
@@ -403,7 +403,7 @@ header button:hover {
   .moved2{
     height: 500px;
     z-index: 1000;
-    position: relative; top: -300px; left: 65%;
+    position: relative; left: 65%;
     transform: translate(-50%, -50%);
     opacity: 1;
     transition: 0.5s;
@@ -412,7 +412,7 @@ header button:hover {
   .moved3{
     height: 500px;
     z-index: 1000;
-    position: relative; top: -300px; left: -760px;
+    position: relative; top: -800px; left: -760px;
     transform: translate(-50%, -50%);
     opacity: 1;
     transition: 0.5s;
@@ -420,19 +420,22 @@ header button:hover {
   }
 
   .title{
+    top: 20%;
     font-size: 6rem;
     transition: 0.5s;
   }
   
   .shadow {
+    top: 20.5%;
     font-size: 6.03rem;
     transition: 0.5s;
   }
   
   .text{
+
     width: 650px;
     font-size: 2rem;
-    position: fixed; top: 40%; left: 50%;
+    position: fixed; top: 70%; left: 50%;
     transform: translate(-50%, -50%);
     transition: 0.5s;
   
@@ -522,6 +525,7 @@ header button:hover {
   }
   
   .text{
+    top: 60%;;
     transition: 0.5s;
     }
   
@@ -541,6 +545,21 @@ header button:hover {
 }
 
 @media only screen  and (max-height: 900px) and (min-height: 600px){
+  
+  .title{
+
+    transition: 0.5s;
+  }
+  
+  .shadow {
+    transition: 0.5s;
+  }
+  
+  .text{
+    top: 60%;;
+    transition: 0.5s;
+    }
+  
   .m2{
     position: relative; top: -85px;
     transition: 0.5s;
@@ -575,10 +594,26 @@ header button:hover {
 }
 
 @media only screen  and (max-height: 820px) and (min-height: 700px){
+
+  .title{
+    top :20%;
+      transition: 0.5s;
+    }
+    
+    .shadow {
+      top :20.5%;
+      transition: 0.5s;
+    }
+    
+    .text{
+      top: 80%;;
+      transition: 0.5s;
+      }
+
   .moved{
     height: 400px;
     z-index: 1000;
-    position: relative; top: 170%; left: 40%;
+    position: relative; top:150%; left: 35%;
     opacity: 1;
     transition: 0.5s;
   }
@@ -586,7 +621,7 @@ header button:hover {
   .moved1{
     height: auto;
     z-index: 1000;
-    position: relative; top: 700px; left: -740px;
+    position: relative; top: 600px; left: -450px;
     opacity: 1;
     transition: 0.5s;
 
@@ -595,7 +630,7 @@ header button:hover {
   .moved2{
     height: 500px;
     z-index: 1000;
-    position: relative; top: -1050px; left: 40%;
+    position: relative; top: -1100px; left: 35%;
 
     opacity: 1;
     transition: 0.5s;
@@ -604,7 +639,7 @@ header button:hover {
   .moved3{
     height: 500px;
     z-index: 1000;
-    position: relative; top: -560px; left: -740px;
+    position: relative; top: -610px; left: -450px;
   
     opacity: 1;
     transition: 0.5s;
