@@ -29,7 +29,6 @@ min-height: 700px;
 
 }
 
-
 .title{
   font-size: 6rem;
   color: black;
@@ -77,22 +76,47 @@ min-height: 700px;
   transform: translate(-50%, -50%);
   line-height: 1.2em;
   }
+
+  .answers{
+    position: absolute; top: 70%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 .answers input{
-  text-align: center;
+  
+  text-align: left;
   font-family: "IM Fell English SC";
   border: 3px  solid black;
   border-radius: 1rem ;
-  width: 660px;
-  height: 100px;
+  width: 300px;
+  height: 40px;
   font-size: 25px;
   word-spacing: 0.1rem;
-  margin: 0;
+  margin:0;
   background: rgba(255, 255, 255, 1);
-  position: fixed; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
   line-height: 1.2em;
-  opacity: 0;
   }
+
+  .answers button{
+    font-family: "IM Fell English SC";
+    font-size: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    position: absolute; top: 50%; left:82%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 30px;
+  }
+
+.answers button:hover{
+  background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+  
+
 
 main{
   
@@ -103,28 +127,16 @@ main{
   padding:0px;
   height: auto;
 }
+
 .m1{
 height: 400px;
 }
+
 .m2{
 position: relative; top: 50px;
 }
 
 .ageConverter{
-  font-family: "IM Fell English SC";
-}
-
-.box{
-height: 400px;
-  font-family: "IM Fell English SC";
-}
-
-.classBox {
-  font-family: "IM Fell English SC";
-  width: 350px;
-}
-
-.stats {
   font-family: "IM Fell English SC";
 }
 
@@ -136,7 +148,7 @@ height: 400px;
 .ageConverter h1{
     font-size:  33px;
     position: absolute; top: -5px; left: 35px;
-    }
+}
    
 .ageConverter h2{
     font-family: "Bilbo Swash Caps";
@@ -159,6 +171,11 @@ height: 400px;
   width: 100px;
 }
 
+.box{
+  height: 400px;
+    font-family: "IM Fell English SC";
+}
+  
 .box img{
   width: 22rem;
   height: 33rem;
@@ -185,10 +202,16 @@ height: 400px;
   width: 230px;
 }
 
+.classBox {
+  font-family: "IM Fell English SC";
+  width: 350px;
+}
+
 .classBox img{
   width: 22rem;
   height: 25rem;
 }
+
 .classBox h1 {
   position: relative; top: -340px; left: 50px; 
 }
@@ -204,6 +227,10 @@ height: 400px;
   position: relative;
   top: -420px;
   left: 85px;
+}
+
+.stats {
+  font-family: "IM Fell English SC";
 }
 
 .stats img{
@@ -233,7 +260,6 @@ height: 400px;
   margin: 18px 0px;
 
 }
-
 
 #startButton {
   font-family: "Bilbo Swash Caps";
@@ -296,10 +322,6 @@ header button:hover {
   color: rgb(0, 0, 0);
   background-color: #ce8b55;
 }
-
-
-
-
 
 
 .shrink{
@@ -544,7 +566,7 @@ header button:hover {
 
 }
 
-@media only screen  and (max-height: 900px) and (min-height: 600px){
+@media only screen  and (max-height: 900px){
   
   .title{
 
@@ -558,6 +580,11 @@ header button:hover {
   .text{
     top: 60%;;
     transition: 0.5s;
+    }
+
+    
+    .answers{
+      transition: 0.5s;
     }
   
   .m2{
@@ -595,7 +622,7 @@ header button:hover {
 
 @media only screen  and (max-height: 820px) and (min-height: 700px){
 
-  .title{
+    .title{
     top :20%;
       transition: 0.5s;
     }
@@ -608,7 +635,13 @@ header button:hover {
     .text{
       top: 80%;;
       transition: 0.5s;
-      }
+    }
+
+    .answers{
+      position: absolute; top: 92%; left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.5s;
+    }
 
   .moved{
     height: 400px;

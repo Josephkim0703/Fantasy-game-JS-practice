@@ -1,85 +1,158 @@
 
-
+document.querySelector('.answers').style.display = "none";
 document.querySelector(".fade").style.opacity = 1;
-
 //Name uppercases the first letter
-let name;
+
 let gender;
 let age;
 let RACE;
 let cL;
+let name;
+let dialogues;
+let currentDialogueIndex;
 
-dialog();
+let humanHealth;
+let humanStrength;
+let humanAim;
+let humanStamina;
+let humanMana;
+let humanDexterity;
+let humanIntelligence;
 
-function popup(){
-    document.querySelector(".answer input").style.opacity = 1;
+let health; 
+let strength;
+let aim ;
+let stamina ;
+let mana;
+let dexterity;
+let intelligence;
 
-}
-/*
+
+
+
+
+                                                 
+
+
+    let dialogContent = document.getElementById('dialog-content');
+      
+     dialogues = [
+        "Hello there traveler!",
+        "Welcome to Alexadria!",
+        "Are you ready to embark on your journey?",
+        "I will ask a serious of questions to get to know you",
+        "What is your name fellow traveler?",
+    ];
+
+
+   currentDialogueIndex = 0;
+  
+    function showDialogue() {
+        if(currentDialogueIndex < dialogues.length) {
+            dialogContent.innerHTML = dialogues[currentDialogueIndex];
+           currentDialogueIndex++;
+           console.log(currentDialogueIndex);
+           
+           if(currentDialogueIndex >= 5) {
+            nameMaker()
+            } 
+
+            if(currentDialogueIndex >= 6) {
+                document.querySelector('.answers').style.display = "none";
+                document.getElementById('text-input').value = "";
+                dialogues.push(`What is your gender? Male or Female`);
+
+                if(currentDialogueIndex >= 7) {
+                 dialogues.pop()
+                  genderMaker();  
+                }
+           } 
+           if(currentDialogueIndex >= 8) {
+            document.querySelector('.answers').style.display = "none";
+           }
+        }
+    } 
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "1") {
+            showDialogue();
+        }
+    });
+
+    showDialogue();
+    
+
+
 function nameMaker() {
-do{
 
-name = document.getElementById("text-input").value 
+do{
+    document.querySelector('.answers').style.display = "block";
+document.getElementById("aButton").onclick = function() {
+name = document.getElementById("text-input").value; 
 name = name.toLowerCase();
 let firstLetter = name.slice(0, 1);
 firstLetter = firstLetter.toUpperCase();
-name = firstLetter + name.slice(1);
+name = firstLetter + name.slice(1); 
 if(name){
-window.alert(`What a fine name ${name}!`);
+dialogues.push(`What a fine name ${name}!`);
 document.getElementById("name").innerHTML = name;
+document.querySelector('.answers').style.display = "none";
+
 }else{
 window.alert("ERROR! Please input a Valid name!");
 }
+}
 }while(name == "");
 }
-/*
 //Gender loop for when someone types something other then male or female
-/*
-function genderMaker() {
 
+function genderMaker() {
+    document.querySelector('.answers').style.display = "block";
 do{
-gender = prompt("What might your gender be, traveler " + "\n Please type male or female");
+
+document.getElementById("aButton").onclick = function() {
+gender =  document.getElementById("text-input").value; 
 gender = gender.toLowerCase();
 if (gender === "male" || gender === "female") {
-window.alert(`I see you are a ${gender}`);
+    document.querySelector('.answers').style.display = "none";
+dialogues.push(`I see you are a ${gender}`);
 document.getElementById("gender").innerHTML = gender;
-break;
-}
-else{
-    window.alert("SPELLING ERROR!");
-}
-}while( gender !=  "female" || "male" );
 
-//Age loop if someone doesnt type a number
+}else{
+    window.alert("INVALID ENTRY!");
 }
+}
+}while( gender == "");
+}
+//Age loop if someone doesnt type a number
 
 function ageMaker() {
 do{
-
- age = prompt("What is your age?");
+    document.querySelector('.answers').style.display = "block";
+ document.getElementById("aButton").onclick = function() {
+ age =  document.getElementById("text-input").value; 
  age = Number(age);
 if(age > 0 && age <= 100){
-
+    document.querySelector('.answers').style.display = "none";
 if( age <= 18){
- window.alert("You are quite young fellow traveler! You must be quite strong to start at such a young age");
-break;
+ dialogues.push("You are quite young fellow traveler! You must be quite strong to start at such a young age");
 } else{
-  window.alert("Splendid! Age is just a number anyone can become an adventurer!");  
- break;
+dialogues.push("Splendid! Age is just a number anyone can become an adventurer!"); 
 }
 
 }
 else{
     window.alert("ERROR! Must be a Valid Age!");
 }
+ }
 }while(age != age > 0 || age <= 100);
 
 }
-*/
-/*
-//Race generator
-window.alert("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
 
+
+//Race generator
+//dialogues.push("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
+/*
 characterMaker();
 
 function characterMaker(){
@@ -205,21 +278,6 @@ break;
 //Stat generator takes race and class type and generates stats based on that combination
 //40 different combination types
 
-let humanHealth;
-let humanStrength;
-let humanAim;
-let humanStamina;
-let humanMana;
-let humanDexterity;
-let humanIntelligence;
-
-let health; 
-let strength;
-let aim ;
-let stamina ;
-let mana;
-let dexterity;
-let intelligence;
 
 if(RACE === 1){
     humanHealth = 10;
@@ -1062,70 +1120,7 @@ function reRoll(){
 }
 */
 
-function dialog(){
 
-    let dialogContent = document.getElementById('dialog-content');
-    
-    
-    let dialogues = [
-        "Hello there traveler!",
-        "Welcome to Alexadria.",
-        "Are you ready to embark on a journey?",
-        "I will ask a serious of questions to get to know you",
-        "What is your name fellow traveler?" ,
-        "Press enter to type" 
-    ];
-
-    
-
-
-
-
-    
-     let nameAnswer = `What a great name ${name}`
-
-    
-    
-    let currentDialogueIndex = 0;
-    
-    function showDialogue() {
-        if(currentDialogueIndex < dialogues.length) {
-            dialogContent.innerHTML = dialogues[currentDialogueIndex];
-            currentDialogueIndex++; 
-        } else {
-        popup();
-      
-        }
-    }
-    
-
-    
-    
-    function openDialogueBox() {
-        currentDialogueIndex = 0;
-        dialogContent.innerHTML = '';
-        showDialogue();
-        document.querySelector('.text').style.display = 'block';
-    
-    }
-    
-    function closeDialogueBox() {
-        document.querySelector('.text').style.display = 'none';
-    
-    }
-    
-    
-    
-    // Add event listener for the Enter key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === "Enter") {
-            showDialogue();
-        }
-    });
-    
-    
-    openDialogueBox();
-    }
 
 
 
