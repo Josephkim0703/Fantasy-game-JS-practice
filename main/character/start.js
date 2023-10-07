@@ -2,11 +2,10 @@
 document.querySelector('.answers').style.display = "none";
 document.querySelector(".fade").style.opacity = 1;
 //Name uppercases the first letter
-
-let gender;
-let age;
 let RACE;
 let cL;
+let gender;
+let age;
 let name;
 let dialogues;
 let currentDialogueIndex;
@@ -27,16 +26,9 @@ let mana;
 let dexterity;
 let intelligence;
 
-
-
-
-
-                                                 
-
-
-    let dialogContent = document.getElementById('dialog-content');
+let dialogContent = document.getElementById('dialog-content');
       
-     dialogues = [
+    dialogues = [
         "Hello there traveler!",
         "Welcome to Alexadria!",
         "Are you ready to embark on your journey?",
@@ -44,34 +36,73 @@ let intelligence;
         "What is your name fellow traveler?",
     ];
 
-
-   currentDialogueIndex = 0;
+    currentDialogueIndex = 0;
   
     function showDialogue() {
         if(currentDialogueIndex < dialogues.length) {
             dialogContent.innerHTML = dialogues[currentDialogueIndex];
-           currentDialogueIndex++;
-           console.log(currentDialogueIndex);
+            currentDialogueIndex++;
+            console.log(currentDialogueIndex);
            
-           if(currentDialogueIndex >= 5) {
+        if(currentDialogueIndex >= 5) {
             nameMaker()
-            } 
+        } 
 
-            if(currentDialogueIndex >= 6) {
-                document.querySelector('.answers').style.display = "none";
-                document.getElementById('text-input').value = "";
-                dialogues.push(`What is your gender? Male or Female`);
-
-                if(currentDialogueIndex >= 7) {
-                 dialogues.pop()
-                  genderMaker();  
-                }
-           } 
-           if(currentDialogueIndex >= 8) {
+        if(currentDialogueIndex >= 6) {
             document.querySelector('.answers').style.display = "none";
-           }
+            document.getElementById('text-input').value = "";
+            dialogues.push(`What is your gender? Male or Female`);
+
+            if(currentDialogueIndex >= 7) {
+                dialogues.pop();
+                genderMaker();  
+            }
+        } 
+           
+        if(currentDialogueIndex >= 8) {
+            document.querySelector('.answers').style.display = "none";
+            document.getElementById('text-input').value = "";
+            dialogues.push(`Now what might you age be ${name}?`);
+
+            if(currentDialogueIndex >= 9) {
+                dialogues.pop()
+                ageMaker();  
+            }
         }
-    } 
+
+        if(currentDialogueIndex >= 10) {
+            document.querySelector('.answers').style.display = "none";
+            dialogues.push("Traveler you will now be given a random race!")
+        }
+        
+        if(currentDialogueIndex >= 11) {
+            dialogues.pop()
+            dialogues.push("The Options are: Human / Dwarf / Elf / Beastmen / RARE: Halfling");
+        }
+
+        if(currentDialogueIndex >= 12) {
+            dialogues.pop()
+            raceMaker();
+                 
+            if(RACE == 1){                       
+                dialogues.push("You are a Human! Goodluck out there Human's have it the hardest\nHumans start out with 5 less stats in every category then other races");
+            }else if(RACE == 2){                     
+                dialogues.push("You are a Dwarf! Dwarf's give +2 dexterity and  intelligence");
+            }else if(RACE == 3){                     
+                    dialogues.push("You are an Elf! Elf's give +2 aim and stamina");
+            }else if(RACE == 4){                     
+                    dialogues.push("You are a Beastmen! Beastmen give +2 stamina and strength");
+            }else if(RACE == 5){
+                    dialogues.push("What your a halfling? Thats extremely rare, Half human Half demon!\nHalfling gives +1 everything and +2 mana and strength");
+            }
+        }
+
+        if(currentDialogueIndex >= 13) {
+            dialogues.pop()
+        }
+    }
+}
+
 
     document.addEventListener('keydown', function(event) {
         if (event.key === "1") {
@@ -81,43 +112,36 @@ let intelligence;
 
     showDialogue();
     
-
-
 function nameMaker() {
-
 do{
     document.querySelector('.answers').style.display = "block";
-document.getElementById("aButton").onclick = function() {
-name = document.getElementById("text-input").value; 
-name = name.toLowerCase();
-let firstLetter = name.slice(0, 1);
-firstLetter = firstLetter.toUpperCase();
-name = firstLetter + name.slice(1); 
+    document.getElementById("aButton").onclick = function() {
+    name = document.getElementById("text-input").value; 
+    name = name.toLowerCase();
+    let firstLetter = name.slice(0, 1);
+    firstLetter = firstLetter.toUpperCase();
+    name = firstLetter + name.slice(1); 
 if(name){
-dialogues.push(`What a fine name ${name}!`);
-document.getElementById("name").innerHTML = name;
-document.querySelector('.answers').style.display = "none";
-
+    dialogues.push(`What a fine name ${name}!`);
+    document.getElementById("name").innerHTML = name;
+    document.querySelector('.answers').style.display = "none";
 }else{
-window.alert("ERROR! Please input a Valid name!");
+    window.alert("ERROR! Please input a Valid name!");
 }
 }
 }while(name == "");
 }
 //Gender loop for when someone types something other then male or female
-
-function genderMaker() {
-    document.querySelector('.answers').style.display = "block";
+function genderMaker() {  
 do{
-
-document.getElementById("aButton").onclick = function() {
-gender =  document.getElementById("text-input").value; 
-gender = gender.toLowerCase();
+    document.querySelector('.answers').style.display = "block";
+    document.getElementById("aButton").onclick = function() {
+    gender =  document.getElementById("text-input").value; 
+    gender = gender.toLowerCase();
 if (gender === "male" || gender === "female") {
     document.querySelector('.answers').style.display = "none";
-dialogues.push(`I see you are a ${gender}`);
-document.getElementById("gender").innerHTML = gender;
-
+    dialogues.push(`I see you are a ${gender}`);
+    document.getElementById("gender").innerHTML = gender;
 }else{
     window.alert("INVALID ENTRY!");
 }
@@ -125,45 +149,37 @@ document.getElementById("gender").innerHTML = gender;
 }while( gender == "");
 }
 //Age loop if someone doesnt type a number
-
 function ageMaker() {
 do{
     document.querySelector('.answers').style.display = "block";
- document.getElementById("aButton").onclick = function() {
- age =  document.getElementById("text-input").value; 
- age = Number(age);
+    document.getElementById("aButton").onclick = function() {
+    age =  document.getElementById("text-input").value; 
+    age = Number(age);
 if(age > 0 && age <= 100){
     document.querySelector('.answers').style.display = "none";
 if( age <= 18){
- dialogues.push("You are quite young fellow traveler! You must be quite strong to start at such a young age");
-} else{
-dialogues.push("Splendid! Age is just a number anyone can become an adventurer!"); 
+    dialogues.push("Starting your journey young I see! You must be quite strong to start at such a young age");
+}else{
+    dialogues.push("Splendid! What a great age to start!"); 
 }
-
-}
-else{
+}else{
     window.alert("ERROR! Must be a Valid Age!");
 }
  }
-}while(age != age > 0 || age <= 100);
+}while(age == "");
 
 }
-
-
 //Race generator
-//dialogues.push("Traveler you will now be given a random race \n Options: \n -Human \n -Dwarf \n -Elf \n -Beastmen \n RARE: Halfling");
-/*
-characterMaker();
-
-function characterMaker(){
+function raceMaker(){
 RACE = Math.floor(Math.random() * 5) + 1;
+
 let ageType;
  
 switch (RACE){
 
 case 1 :
     ageType = age;
-    window.alert("You are a Human! Goodluck out there Human's have it the hardest\nHumans start out with 5 less stats in every category then other races");
+    
     document.getElementById("race").innerHTML = "Human";
     document.getElementById("ageRace").innerHTML = "Human";
     document.getElementById("raceAge").innerHTML = age;
@@ -173,7 +189,7 @@ break;
 
 case 2 :
     ageType = age + 5; 
-    window.alert("You are a Dwarf! Dwarf's give +2 dexterity and  intelligence");
+ 
     document.getElementById("race").innerHTML = "Dwarf";
      document.getElementById("ageRace").innerHTML = "Dwarf";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -183,7 +199,7 @@ break;
 
 case 3 :
     ageType =  age *3;
-    window.alert("You are an Elf! Elf's give +2 aim and stamina");
+   
     document.getElementById("race").innerHTML = "Elf";
      document.getElementById("ageRace").innerHTML = "Elf";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -193,7 +209,7 @@ break;
 
 case 4 :
     ageType=   age * 2;
-    window.alert("You are a Beastmen! Beastmen give +2 stamina and strength");
+ 
     document.getElementById("race").innerHTML = "Beastmen";
      document.getElementById("ageRace").innerHTML = "Beastmen";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -203,7 +219,7 @@ break;
 
 case 5 :
     ageType=   age * 5;
-    window.alert("What your a halfling? Thats extremely rare, Half human Half demon!\nHalfling gives +1 everything and +2 mana and strength");
+   
     document.getElementById("race").innerHTML = "Halfling";
      document.getElementById("ageRace").innerHTML = "Halfling";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -211,10 +227,12 @@ case 5 :
      document.getElementById("age").innerHTML ="Age: "+age+ "/ Halfling age: "+ ageType;
 break;
 }
-
+}
+/*
+function classMaker(){
 //Class generator
 window.alert("You will now be given a random class \n Options: \n -Warrior \n -Archer \n -Mage \n -Healer \n -Assassin \n -Barbarian \n -Craftsmen \n RARE: Archetype");
-cL = Math.floor(Math.random() * 8) + 1;
+const cL = Math.floor(Math.random() * 8) + 1;
 
 switch (cL){
    
@@ -274,10 +292,11 @@ case 8:
     document.getElementById("classImg").src = "./assets/archetype.png";
 break;
     }
+}
 
 //Stat generator takes race and class type and generates stats based on that combination
 //40 different combination types
-
+function statMaker(){
 
 if(RACE === 1){
     humanHealth = 10;
@@ -1095,7 +1114,7 @@ if(RACE === 1){
     }
   }
 }
-
+/*
 window.alert("Statistics are randomly generated from a combination of your race and class")
 
 setTimeout(reRoll, 1500);
