@@ -1,4 +1,6 @@
 
+document.querySelector('#popup').style.display = "none";
+document.querySelector('#popup1').style.display = "none";
 document.querySelector('.answers').style.display = "none";
 document.querySelector(".fade").style.opacity = 1;
 //Name uppercases the first letter
@@ -72,40 +74,90 @@ let dialogContent = document.getElementById('dialog-content');
 
         if(currentDialogueIndex >= 10) {
             document.querySelector('.answers').style.display = "none";
-            dialogues.push("Traveler you will now be given a random race!")
+            dialogues.push(`${name} you will now be given a random race!`)
+            document.querySelector('#popup').style.display = "none";
         }
         
         if(currentDialogueIndex >= 11) {
             dialogues.pop()
-            dialogues.push("The Options are: Human / Dwarf / Elf / Beastmen / RARE: Halfling");
+            dialogues.push(`...`)
+            document.querySelector('#popup').style.display = "block";
         }
 
-        if(currentDialogueIndex >= 12) {
+        if(currentDialogueIndex >= 12 && currentDialogueIndex <=12) {         
             dialogues.pop()
             raceMaker();
-                 
-            if(RACE == 1){                       
-                dialogues.push("You are a Human! Goodluck out there Human's have it the hardest\nHumans start out with 5 less stats in every category then other races");
-            }else if(RACE == 2){                     
-                dialogues.push("You are a Dwarf! Dwarf's give +2 dexterity and  intelligence");
-            }else if(RACE == 3){                     
-                    dialogues.push("You are an Elf! Elf's give +2 aim and stamina");
-            }else if(RACE == 4){                     
-                    dialogues.push("You are a Beastmen! Beastmen give +2 stamina and strength");
-            }else if(RACE == 5){
-                    dialogues.push("What your a halfling? Thats extremely rare, Half human Half demon!\nHalfling gives +1 everything and +2 mana and strength");
-            }
+            console.log(RACE);
+            document.querySelector('#popup').style.display = "none";     
         }
 
         if(currentDialogueIndex >= 13) {
+            document.querySelector('#popup').style.display = "none";
+            dialogues.pop()
+            dialogues.push(`${name} you will now be given a random class!`)
+            document.querySelector('#popup1').style.display = "none";
+        }
+
+        if(currentDialogueIndex >= 14) {
+            dialogues.pop()
+            dialogues.push("...");
+            document.querySelector('#popup1').style.display = "block";
+        }
+
+        if(currentDialogueIndex >= 15 && currentDialogueIndex <=15) {
+            dialogues.pop()
+            classMaker();
+            console.log(cL);
+            document.querySelector('#popup1').style.display = "none";
+        }
+
+        if(currentDialogueIndex >= 16) {
+            document.querySelector('#popup1').style.display = "none";
+            dialogues.pop()
+            dialogues.push(`Statistics are randomly generated from a combination of your race and class`);
+        }
+
+        if(currentDialogueIndex >= 17) {
+            dialogues.pop()
+            dialogues.push(`The better the race and class, the higher the stats!`);
+        }
+
+        
+        if(currentDialogueIndex >= 18) {
+            dialogues.pop()
+            dialogues.push(`...`);
+        }
+
+        if(currentDialogueIndex >= 19) {
+            dialogues.pop()
+            statMaker();
+        }
+
+        if(currentDialogueIndex >= 19) {
+            dialogues.pop()
+            dialogues.push(`Would you like to ReRoll your Race and Class? This will change your stats!`);
+        }
+
+        if(currentDialogueIndex >= 21) {
+            dialogues.pop()
+            dialogues.push(`WARNING! You get only 1 ReRoll`);
+        }
+
+        if(currentDialogueIndex >= 21) {
+            dialogues.pop()
+            reRoll();
+        }
+
+        if(currentDialogueIndex >= 21) {
             dialogues.pop()
         }
+
     }
 }
 
 
-    document.addEventListener('keydown', function(event) {
-        if (event.key === "1") {
+    document.addEventListener('keypress', function(event) {
+        if (event.key === " ") {
             showDialogue();
         }
     });
@@ -170,16 +222,15 @@ if( age <= 18){
 
 }
 //Race generator
-function raceMaker(){
-RACE = Math.floor(Math.random() * 5) + 1;
 
+function raceMaker(){
 let ageType;
- 
+RACE = Math.floor(Math.random() * 5) + 1;
 switch (RACE){
 
 case 1 :
     ageType = age;
-    
+    dialogues.push("You are a Human! Goodluck out there Human's have it the hardest\nHumans start out with 5 less stats in every category then other races");
     document.getElementById("race").innerHTML = "Human";
     document.getElementById("ageRace").innerHTML = "Human";
     document.getElementById("raceAge").innerHTML = age;
@@ -189,7 +240,7 @@ break;
 
 case 2 :
     ageType = age + 5; 
- 
+    dialogues.push("You are a Dwarf! Dwarf's give +2 dexterity and  intelligence");
     document.getElementById("race").innerHTML = "Dwarf";
      document.getElementById("ageRace").innerHTML = "Dwarf";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -199,7 +250,7 @@ break;
 
 case 3 :
     ageType =  age *3;
-   
+    dialogues.push("You are an Elf! Elf's give +2 aim and stamina");
     document.getElementById("race").innerHTML = "Elf";
      document.getElementById("ageRace").innerHTML = "Elf";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -209,7 +260,7 @@ break;
 
 case 4 :
     ageType=   age * 2;
- 
+    dialogues.push("You are a Beastmen! Beastmen give +2 stamina and strength");
     document.getElementById("race").innerHTML = "Beastmen";
      document.getElementById("ageRace").innerHTML = "Beastmen";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -219,7 +270,7 @@ break;
 
 case 5 :
     ageType=   age * 5;
-   
+    dialogues.push("What your a halfling? Thats extremely rare, Half human Half demon!\nHalfling gives +1 everything and +2 mana and strength");
     document.getElementById("race").innerHTML = "Halfling";
      document.getElementById("ageRace").innerHTML = "Halfling";
      document.getElementById("raceAge").innerHTML = ageType;
@@ -228,72 +279,71 @@ case 5 :
 break;
 }
 }
-/*
+
 function classMaker(){
 //Class generator
-window.alert("You will now be given a random class \n Options: \n -Warrior \n -Archer \n -Mage \n -Healer \n -Assassin \n -Barbarian \n -Craftsmen \n RARE: Archetype");
-const cL = Math.floor(Math.random() * 8) + 1;
+
+cL = Math.floor(Math.random() * 8) + 1;
 
 switch (cL){
    
 case 1:
-    window.alert("Congradulation you're a Warrior! You are skilled with melee weapons and hand to hand combat but have no mana");
+     dialogues.push("Congradulation you're a Warrior! You are skilled with melee weapons and hand to hand combat but have no mana");
      document.getElementById("cL").innerHTML = "Warrior";
      document.getElementById("cc").innerHTML = "Warrior";
      document.getElementById("classImg").src = "./assets/warrior.png";
 break;
 
 case 2:
-    window.alert("Congradulation you're an Archer! You are skilled with projectile weapons but lack skills with melee weapons");
+    dialogues.push("Congradulation you're an Archer! You are skilled with projectile weapons but lack skills with melee weapons");
     document.getElementById("cL").innerHTML = "Archer";
     document.getElementById("cc").innerHTML = "Archer";
     document.getElementById("classImg").src = "./assets/archer.png";
 break;
 
 case 3:
-    window.alert("Congradulation you're a Mage! You are skilled at mage craft but lack in stamina and durability");
+    dialogues.push("Congradulation you're a Mage! You are skilled at mage craft but lack in stamina and durability");
     document.getElementById("cL").innerHTML = "Mage";
     document.getElementById("cc").innerHTML = "Mage";
     document.getElementById("classImg").src = "./assets/mage.png";
 break;
 
 case 4:
-    window.alert("Congradulation you're a Healer! You are skilled at healing and self regeneration but lack in fighting skills");
+    dialogues.push("Congradulation you're a Healer! You are skilled at healing and self regeneration but lack in fighting skills");
     document.getElementById("cL").innerHTML = "Healer";
     document.getElementById("cc").innerHTML = "Healer";
     document.getElementById("classImg").src = "./assets/healer.png";
 break;
 
 case 5:
-    window.alert("Congradulation you're a Assassin! You are extremely stealthy and can mimic other classes for a short period of time but lack raw power and durability");
+    dialogues.push("Congradulation you're a Assassin! You are extremely stealthy and can mimic other classes for a short period of time but lack raw power and durability");
     document.getElementById("cL").innerHTML = "Assassin";
     document.getElementById("cc").innerHTML = "Assassin";
     document.getElementById("classImg").src = "./assets/assassin.png";
 break;
 
 case 6:
-    window.alert("Oh no your a Barbarian! You have extreme power and dexerity but you lack intelligence");
+    dialogues.push("Oh no your a Barbarian! You have extreme power and dexerity but you lack intelligence");
     document.getElementById("cL").innerHTML = "Barbarian";
     document.getElementById("cc").innerHTML = "Barbarian";
     document.getElementById("classImg").src = "./assets/barbarian.png";
 break;
 
 case 7:
-    window.alert("Interesting you are a Craftsmen! You have amazing crafting skills but lack in stamina and mana");
+    dialogues.push("Interesting you are a Craftsmen! You have amazing crafting skills but lack in stamina and mana");
     document.getElementById("cL").innerHTML = "Craftsmen";
     document.getElementById("cc").innerHTML = "Craftsmen";
     document.getElementById("classImg").src = "./assets/craftsmen.png";
 break;
 
 case 8:
-    window.alert("Wow this is the Rarest Class an Archetype! \nYou are given +5 in health, strength and aim and +10 in stamina, mana, dexterity, and intelligence");
+    dialogues.push("Wow this is the Rarest Class an Archetype! \nYou are given +5 in health, strength and aim and +10 in stamina, mana, dexterity, and intelligence");
     document.getElementById("cL").innerHTML = "Archetype";
     document.getElementById("cc").innerHTML = "Archetype";
     document.getElementById("classImg").src = "./assets/archetype.png";
 break;
     }
 }
-
 //Stat generator takes race and class type and generates stats based on that combination
 //40 different combination types
 function statMaker(){
@@ -1114,30 +1164,32 @@ if(RACE === 1){
     }
   }
 }
-/*
-window.alert("Statistics are randomly generated from a combination of your race and class")
-
-setTimeout(reRoll, 1500);
 
 function reRoll(){
     
     let answer;
     do{
-    answer = prompt("Would you like to use your 1 re-roll for your race and class \n!THIS WILL GIVE YOU DIFFERENT STATS!\nEnter yes or no");
+    document.querySelector('.answers').style.display = "block";
+    document.getElementById("aButton").onclick = function(){
+    answer =  document.getElementById("text-input").value; 
     answer = answer.toLowerCase();
     if(answer === "yes"){
         for(let attempt = 0; attempt <= 0 ; attempt += 1){
         window.alert("You rolled again!");
-        characterMaker();
+        raceMaker();
+        classMaker();
+        statMaker();
+        document.querySelector('.answers').style.display = "none";
         }
     }else if(answer === "no"){
-    break;
+        document.querySelector('.answers').style.display = "none";
     }else{
         window.alert("Please enter yes or no");
     } 
-    }while(answer!== "yes" && answer!== "no");
+    }
+    }while(answer == "");
 }
-*/
+
 
 
 

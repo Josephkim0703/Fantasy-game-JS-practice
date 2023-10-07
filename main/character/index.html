@@ -100,8 +100,19 @@
 <button type="button" id="aButton">Talk</button>
 </div>
 
+<div id="popup">
+    <h1>Options:</h1>
+    <h2>Human <br> Dwarf <br> Elf <br> Beastmen</h2>
+    <h1>Rare:</h1>
+    <h2>Halfling</h2>
+</div>
 
-
+<div id="popup1">
+    <h1>Options:</h1>
+    <h2>warrior <br> Archer <br> Mage <br> Healer <br> Assassin <br> Barbarian <br> Craftsmen</h2>
+    <h1>Rare:</h1>
+    <h2>Archetype</h2>
+</div>
 
 </div>
 
@@ -125,8 +136,6 @@ document.getElementById("ageButton").addEventListener ('mouseup', () =>{
 });
 
 
-
-
 document.getElementById("infoButton").addEventListener ('mousedown', () =>{
  hold = true
     document.querySelector(".box").classList.toggle('moved2');
@@ -140,7 +149,6 @@ document.getElementById("infoButton").addEventListener ('mouseup', () =>{
 });
 
 
-
 document.getElementById("classButton").addEventListener ('mousedown', () =>{
  hold = true
     document.querySelector(".classBox").classList.toggle('moved1');
@@ -152,7 +160,6 @@ document.getElementById("classButton").addEventListener ('mouseup', () =>{
     document.querySelector(".classBox").classList.toggle('moved1');
 
 });
-
 
 
 document.getElementById("statButton").addEventListener ('mousedown', () =>{
