@@ -1,6 +1,15 @@
 body {
   overflow: hidden;
   margin: 0;
+ 
+}
+
+.logo{
+  z-index: 1000;
+  width: 90px;
+  height: 80px;
+  position: fixed; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .wrapper{
@@ -99,6 +108,7 @@ transform: scale(5);
 
 
 
+
 #uiButton {
   background: transparent;
   border: 0px;
@@ -116,10 +126,6 @@ transform: scale(5);
 
 }
 
-#uiButton:hover {
-
- 
-}
 
 #uiButton:active {
   width: 230px;

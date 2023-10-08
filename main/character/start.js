@@ -1,5 +1,6 @@
 
 document.querySelector('#popup').style.display = "none";
+document.querySelector('#startButton').style.display = "none";
 document.querySelector('#popup1').style.display = "none";
 document.querySelector('.answers').style.display = "none";
 document.querySelector(".fade").style.opacity = 1;
@@ -41,7 +42,7 @@ let dialogContent = document.getElementById('dialog-content');
     currentDialogueIndex = 0;
   
     function showDialogue() {
-        if(currentDialogueIndex < dialogues.length) {
+        if(currentDialogueIndex < dialogues.length){
             dialogContent.innerHTML = dialogues[currentDialogueIndex];
             currentDialogueIndex++;
             console.log(currentDialogueIndex);
@@ -64,7 +65,7 @@ let dialogContent = document.getElementById('dialog-content');
         if(currentDialogueIndex >= 8) {
             document.querySelector('.answers').style.display = "none";
             document.getElementById('text-input').value = "";
-            dialogues.push(`Now what might you age be ${name}?`);
+            dialogues.push(`Now what might your age be ${name}?`);
 
             if(currentDialogueIndex >= 9) {
                 dialogues.pop()
@@ -126,35 +127,55 @@ let dialogContent = document.getElementById('dialog-content');
         if(currentDialogueIndex >= 18) {
             dialogues.pop()
             dialogues.push(`...`);
+        
+            if(currentDialogueIndex >= 19 && currentDialogueIndex <=19) {
+                statMaker();
+            }
         }
 
         if(currentDialogueIndex >= 19) {
             dialogues.pop()
-            statMaker();
-        }
-
-        if(currentDialogueIndex >= 19) {
-            dialogues.pop()
+            document.querySelector('.answers').style.display = "none";
+            document.getElementById('text-input').value = "";
             dialogues.push(`Would you like to ReRoll your Race and Class? This will change your stats!`);
         }
 
-        if(currentDialogueIndex >= 21) {
+        if(currentDialogueIndex >= 20) {
             dialogues.pop()
-            dialogues.push(`WARNING! You get only 1 ReRoll`);
+            dialogues.push(`WARNING! You get only 1 ReRoll! Yes or No`);
+            document.querySelector('.answers').style.display = "none";
+
+            if(currentDialogueIndex >= 21 && currentDialogueIndex <=21){
+                dialogues.pop()
+                reRoll();
+            }
         }
 
-        if(currentDialogueIndex >= 21) {
+        if(currentDialogueIndex >= 22) {
+            document.querySelector('.answers').style.display = "none";
             dialogues.pop()
-            reRoll();
+            dialogues.push(`Alright then ${name} you are now ready to set out on your journey!`);
+            document.querySelector('#startButton').style.display = "none";
         }
 
-        if(currentDialogueIndex >= 21) {
+        if(currentDialogueIndex >= 23) {
             dialogues.pop()
+            dialogues.push(`You will be faced with many challenges that will either INCREASE or DECREASE your stats!`);
+            document.querySelector('#startButton').style.display = "none";
         }
 
+        if(currentDialogueIndex >= 24 ) {
+            dialogues.pop()
+            dialogues.push(`Goodluck to you ${name}! I Hope I see your return as a great Adventurer!`);
+            document.querySelector('#startButton').style.display = "none";
+        }
+
+        if(currentDialogueIndex >=  25 && currentDialogueIndex <=25) {
+            dialogues.pop()
+            document.querySelector('#startButton').style.display = "block";
+        }
     }
 }
-
 
     document.addEventListener('keypress', function(event) {
         if (event.key === " ") {
@@ -222,7 +243,6 @@ if( age <= 18){
 
 }
 //Race generator
-
 function raceMaker(){
 let ageType;
 RACE = Math.floor(Math.random() * 5) + 1;
@@ -279,7 +299,7 @@ case 5 :
 break;
 }
 }
-
+//Class generator
 function classMaker(){
 //Class generator
 
@@ -1164,7 +1184,7 @@ if(RACE === 1){
     }
   }
 }
-
+//rerolls race and stats
 function reRoll(){
     
     let answer;
@@ -1175,13 +1195,13 @@ function reRoll(){
     answer = answer.toLowerCase();
     if(answer === "yes"){
         for(let attempt = 0; attempt <= 0 ; attempt += 1){
-        window.alert("You rolled again!");
         raceMaker();
         classMaker();
         statMaker();
         document.querySelector('.answers').style.display = "none";
         }
     }else if(answer === "no"){
+        dialogues.push(`Wise decision ${name}.`);
         document.querySelector('.answers').style.display = "none";
     }else{
         window.alert("Please enter yes or no");
