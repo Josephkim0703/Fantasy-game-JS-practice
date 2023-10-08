@@ -3,7 +3,11 @@ document.querySelector('#popup').style.display = "none";
 document.querySelector('#startButton').style.display = "none";
 document.querySelector('#popup1').style.display = "none";
 document.querySelector('.answers').style.display = "none";
-document.querySelector(".fade").style.opacity = 1;
+setTimeout(() => {
+    document.querySelector(".fade").style.opacity = 1;
+document.querySelector('.logo').style.opacity = 0;
+}, 1000);
+
 //Name uppercases the first letter
 let RACE;
 let cL;
