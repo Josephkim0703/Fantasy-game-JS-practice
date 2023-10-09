@@ -5,8 +5,13 @@ document.querySelector('#popup1').style.display = "none";
 document.querySelector('.answers').style.display = "none";
 setTimeout(() => {
     document.querySelector(".fade").style.opacity = 1;
-document.querySelector('.logo').style.opacity = 0;
+    document.querySelector('.logo').style.opacity = 0;
 }, 1000);
+
+setTimeout(() => {
+    document.querySelector('.logo').style.width = 0;
+    document.querySelector('.logo').style.height = 0;
+}, 4500);
 
 //Name uppercases the first letter
 let RACE;
@@ -151,15 +156,16 @@ let dialogContent = document.getElementById('dialog-content');
 
             if(currentDialogueIndex >= 21 && currentDialogueIndex <=21){
                 dialogues.pop()
-                reRoll();
+                reRoll();            
             }
         }
+
+      
 
         if(currentDialogueIndex >= 22) {
             document.querySelector('.answers').style.display = "none";
             dialogues.pop()
             dialogues.push(`Alright then ${name} you are now ready to set out on your journey!`);
-            document.querySelector('#startButton').style.display = "none";
         }
 
         if(currentDialogueIndex >= 23) {
@@ -168,15 +174,15 @@ let dialogContent = document.getElementById('dialog-content');
             document.querySelector('#startButton').style.display = "none";
         }
 
-        if(currentDialogueIndex >= 24 ) {
+        if(currentDialogueIndex >= 24) {
             dialogues.pop()
             dialogues.push(`Goodluck to you ${name}! I Hope I see your return as a great Adventurer!`);
             document.querySelector('#startButton').style.display = "none";
-        }
 
-        if(currentDialogueIndex >=  25 && currentDialogueIndex <=25) {
-            dialogues.pop()
-            document.querySelector('#startButton').style.display = "block";
+            if(currentDialogueIndex >= 25 && currentDialogueIndex <=26) {
+                dialogues.pop()
+                document.querySelector('#startButton').style.display = "block";
+            }
         }
     }
 }
@@ -1202,6 +1208,7 @@ function reRoll(){
         raceMaker();
         classMaker();
         statMaker();
+        dialogues.pop()
         document.querySelector('.answers').style.display = "none";
         }
     }else if(answer === "no"){

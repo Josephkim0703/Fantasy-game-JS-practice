@@ -592,12 +592,12 @@ header button:hover {
   }
 
   #popup{
-
+    top: 48%;
     transition: 0.5s;
     }
     
     #popup1{
-  
+      top: 48%;
     transition: 0.5s;
     }
 }
@@ -631,7 +631,7 @@ header button:hover {
     }
 
     .answers{
-      top: 90%; 
+      top: 90.8%; 
       transition: 0.5s;
     }
   
