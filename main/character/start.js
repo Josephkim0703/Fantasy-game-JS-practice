@@ -1,6 +1,5 @@
-
+document.querySelector('#classImg').style.display = "none";
 document.querySelector('#popup').style.display = "none";
-document.querySelector('#startButton').style.display = "none";
 document.querySelector('#popup1').style.display = "none";
 document.querySelector('.answers').style.display = "none";
 setTimeout(() => {
@@ -322,6 +321,7 @@ case 1:
      document.getElementById("cL").innerHTML = "Warrior";
      document.getElementById("cc").innerHTML = "Warrior";
      document.getElementById("classImg").src = "./assets/warrior.png";
+     document.querySelector('#classImg').style.display = "block";
 break;
 
 case 2:
@@ -329,6 +329,7 @@ case 2:
     document.getElementById("cL").innerHTML = "Archer";
     document.getElementById("cc").innerHTML = "Archer";
     document.getElementById("classImg").src = "./assets/archer.png";
+    document.querySelector('#classImg').style.display = "block";
 break;
 
 case 3:
@@ -336,6 +337,7 @@ case 3:
     document.getElementById("cL").innerHTML = "Mage";
     document.getElementById("cc").innerHTML = "Mage";
     document.getElementById("classImg").src = "./assets/mage.png";
+    document.querySelector('#classImg').style.display = "block";
 break;
 
 case 4:
@@ -343,6 +345,7 @@ case 4:
     document.getElementById("cL").innerHTML = "Healer";
     document.getElementById("cc").innerHTML = "Healer";
     document.getElementById("classImg").src = "./assets/healer.png";
+    document.querySelector('#classImg').style.display = "block";
 break;
 
 case 5:
@@ -350,6 +353,7 @@ case 5:
     document.getElementById("cL").innerHTML = "Assassin";
     document.getElementById("cc").innerHTML = "Assassin";
     document.getElementById("classImg").src = "./assets/assassin.png";
+    document.querySelector('#classImg').style.display = "block";
 break;
 
 case 6:
@@ -357,6 +361,7 @@ case 6:
     document.getElementById("cL").innerHTML = "Barbarian";
     document.getElementById("cc").innerHTML = "Barbarian";
     document.getElementById("classImg").src = "./assets/barbarian.png";
+    document.querySelector('#classImg').style.display = "block";
 break;
 
 case 7:
@@ -364,6 +369,7 @@ case 7:
     document.getElementById("cL").innerHTML = "Craftsmen";
     document.getElementById("cc").innerHTML = "Craftsmen";
     document.getElementById("classImg").src = "./assets/craftsmen.png";
+    document.querySelector('#classImg').style.display = "block";
 break;
 
 case 8:
@@ -371,6 +377,7 @@ case 8:
     document.getElementById("cL").innerHTML = "Archetype";
     document.getElementById("cc").innerHTML = "Archetype";
     document.getElementById("classImg").src = "./assets/archetype.png";
+    document.querySelector('#classImg').style.display = "block";
 break;
     }
 }
