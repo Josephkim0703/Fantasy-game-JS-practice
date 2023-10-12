@@ -1,7 +1,7 @@
 body {
+
   overflow: hidden;
   margin: 0;
- cursor: url(./assets/Logo.png), auto;
 }
 
 .logo{
@@ -10,6 +10,7 @@ body {
   height: 750px;
   position: fixed; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.5s;
 }
 
 .wrapper{
@@ -27,6 +28,7 @@ body {
 
  }
  video {
+ 
   z-index: -100;
   pointer-events: none;
  
@@ -516,4 +518,14 @@ transform: scale(5);
     transform: translate(-50%, -50%);
     transition: 0.2s;
   }
+}
+
+@media only screen and (max-height:710px) and (min-height: 600px) {
+  .logo{
+ 
+    width: 600px;
+    height: 650px;
+transition: 0.5s;
+  }
+
 }

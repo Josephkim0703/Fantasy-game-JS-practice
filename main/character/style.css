@@ -333,7 +333,7 @@ transform: translate(-50%,-50%);
 .starter img {
 width: 220px;
 height: 140px;
-  position: fixed; top: 90%; left: 50%;
+  position: fixed; top: 93%; left: 50%;
   transform: translate(-50%,-50%);
 }
 
@@ -583,12 +583,12 @@ header button:hover {
   }
 
   .starter img {
-  position: fixed; top: 81%; left: 50%;
+  position: fixed; top: 83%; left: 50%;
   transition: 0.5s;
   }
 
   .starter h1{
-    position: fixed; top: 80%; left: 50%;
+    position: fixed; top: 82%; left: 50%;
     transform: translate(-50%,-50%);
     transition: 0.5s;
     }
@@ -606,7 +606,7 @@ header button:hover {
 
 @media only screen  and (max-height: 1050px){
  
-  #startButton{
+  .starter img{
     top: 93%;
     transition: 0.5s;
   }
@@ -632,7 +632,7 @@ header button:hover {
   }
   
   .text{
-    top: 80%;;
+    top: 76%;;
     transition: 0.5s;
     }
 
@@ -677,7 +677,7 @@ header button:hover {
   }
   
   .text{
-    top: 80%;;
+    top: 75%;;
     transition: 0.5s;
     }
 
@@ -745,10 +745,14 @@ header button:hover {
     transition: 0.5s;
     }
 
-    #startButton {
-    top: 94%;
-    transition: 0.5s;
+    .starter img{
+      left: 17%; top: 80%;
     }
+
+    .starter h1{
+      left: 17%; top: 78%;
+    }
+
 
     .title{
     top :20%;
