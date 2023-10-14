@@ -43,7 +43,7 @@ let dialogContent = document.getElementById('dialog-content');
         "Hello there traveler!",
         "Welcome to Alexadria!",
         "Are you ready to embark on your journey?",
-        "I will ask a serious of questions to get to know you",
+        "I will ask a series of questions to get to know you",
         "What is your name fellow traveler?",
     ];
 
@@ -158,8 +158,6 @@ let dialogContent = document.getElementById('dialog-content');
                 reRoll();            
             }
         }
-
-      
 
         if(currentDialogueIndex >= 22) {
             document.querySelector('.answers').style.display = "none";
