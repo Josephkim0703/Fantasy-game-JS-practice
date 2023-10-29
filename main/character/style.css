@@ -252,7 +252,7 @@ position: relative; top: 50px;
   color: black;
   position: relative;
   top: -510px;
-  left: 35px;
+  left: 50px;
 }
 
 .box li{
@@ -323,24 +323,23 @@ position: relative; top: 50px;
 
 .starter h1{
 z-index: 1;
-font-size: 23px;
+font-size: 22px;
 font-family: "IM Fell English SC";
 color: rgb(255, 255, 255);
 position: fixed; top: 91.5%; left: 50%;
 transform: translate(-50%,-50%);
 }
 
-.starter img {
+.starter img{
 width: 220px;
 height: 140px;
-  position: fixed; top: 93%; left: 50%;
-  transform: translate(-50%,-50%);
+position: fixed; top: 93%; left: 50%;
+transform: translate(-50%,-50%);
 }
 
-.starter img:hover {
+.starter:hover img{
   width: 200px;
   height: 125px;
-
 }
 
 header{
@@ -659,7 +658,7 @@ header button:hover {
       }
   
       #popup1{
-      top:55%;
+      top:50%;
       transition: 0.5s;
       }
 

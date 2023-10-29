@@ -1,23 +1,25 @@
-document.querySelector('#classImg').style.display = "none";
-document.querySelector('#popup').style.display = "none";
-document.querySelector('#popup1').style.display = "none";
-document.querySelector('.answers').style.display = "none";
-document.querySelector('.starter').style.display = "none";
-setTimeout(() => {
-    document.querySelector(".fade").style.opacity = 1;
-    document.querySelector('.logo').style.opacity = 0;
-}, 1000);
+    document.querySelector('#classImg').style.display = "none";
+    document.querySelector('#popup').style.display = "none";
+    document.querySelector('#popup1').style.display = "none";
+    document.querySelector('.answers').style.display = "none";
+    document.querySelector('.starter').style.display = "none";
 
-setTimeout(() => {
-   document.querySelector('.logo').style.display = "none";
-}, 4500);
-
+    setTimeout(() => {
+        document.querySelector(".fade").style.opacity = 1;
+        document.querySelector('.logo').style.opacity = 0;
+    }, 1000);
+    
+    setTimeout(() => {
+       document.querySelector('.logo').style.display = "none";
+    }, 4500);
+    
 //Name uppercases the first letter
 let RACE;
 let cL;
 let gender;
 let age;
 let name;
+
 let dialogues;
 let currentDialogueIndex;
 
@@ -37,21 +39,19 @@ let mana;
 let dexterity;
 let intelligence;
 
-let dialogContent = document.getElementById('dialog-content');
-      
-    dialogues = [
+dialogues = [
         "Hello there traveler!",
         "Welcome to Alexadria!",
         "Are you ready to embark on your journey?",
         "I will ask a series of questions to get to know you",
         "What is your name fellow traveler?",
-    ];
+];
 
     currentDialogueIndex = 0;
   
-    function showDialogue() {
+function showDialogue() {
         if(currentDialogueIndex < dialogues.length){
-            dialogContent.innerHTML = dialogues[currentDialogueIndex];
+            document.getElementById('dialog-content').innerHTML = dialogues[currentDialogueIndex];
             currentDialogueIndex++;
             console.log(currentDialogueIndex);
            
@@ -184,13 +184,11 @@ let dialogContent = document.getElementById('dialog-content');
     }
 }
 
-    document.addEventListener('keypress', function(event) {
+document.addEventListener('keypress', function(event) {
         if (event.key === " ") {
             showDialogue();
         }
-    });
-
-    showDialogue();
+});
     
 function nameMaker() {
 do{
@@ -1225,6 +1223,10 @@ function reRoll(){
     }
     }while(answer == "");
 }
+
+//export {RACE, cL, gender, age, name,
+ //   humanHealth, humanStrength, humanAim, humanStamina, humanMana, humanDexterity, humanIntelligence,
+//health, strength, aim , stamina , mana, dexterity, intelligence};
 
 
 
